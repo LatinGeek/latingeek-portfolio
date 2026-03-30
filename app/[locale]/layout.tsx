@@ -12,7 +12,7 @@ const inter = Inter({ subsets: ['latin'] });
 
 type Props = {
   children: React.ReactNode;
-  params: { locale: string };
+  params: Promise<{ locale: string }>;
 };
 
 export function generateStaticParams() {
@@ -20,7 +20,8 @@ export function generateStaticParams() {
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
-  const messages = await getMessages(params.locale);
+  const { locale } = await params;
+  const messages = await getMessages(locale);
   const metadata = messages.metadata as any;
   
   return {
@@ -44,16 +45,18 @@ export default async function LocaleLayout({
   children,
   params
 }: Props) {
+  const { locale } = await params;
+  
   // Validate that the incoming locale is valid
-  if (!locales.includes(params.locale as any)) {
+  if (!locales.includes(locale as any)) {
     notFound();
   }
 
   // Load messages for the current locale
-  const messages = await getMessages(params.locale);
+  const messages = await getMessages(locale);
 
   return (
-    <html lang={params.locale} className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth">
       <body className={`${inter.className} bg-gray-950 text-gray-50 antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <div className="min-h-screen flex flex-col">
