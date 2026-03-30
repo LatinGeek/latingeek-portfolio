@@ -5,8 +5,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
-    "postinstall": "npm install --legacy-peer-deps"
+    "start": "next start"
   },
   "dependencies": {
     "next": "^15.3.6",
