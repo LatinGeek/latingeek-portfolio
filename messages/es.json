@@ -1,0 +1,21 @@
+{
+  "metadata": {
+    "title": "German Lamela | Latingeek - Desarrollador Full Stack",
+    "description": "Portafolio de German Lamela (Latingeek), desarrollador full stack especializado en aplicaciones web modernas."
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre Mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "German Lamela",
+    "aka": "alias Latingeek",
+    "title": "Desarrollador Full Stack",
+    "description": "Construyo experiencias digitales excepcionales que son rápidas, accesibles, visualmente atractivas y responsivas.",
+    "viewWork": "Ver Mi Trabajo",
+    "getInTouch": "Contáctame"
+  }
+}
