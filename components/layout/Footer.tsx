@@ -1,6 +1,12 @@
 import Link from 'next/link';
-import { Github, Linkedin, Mail, ExternalLink } from 'lucide-react';
+import { Github, Linkedin, Twitter, Mail } from 'lucide-react';
 import { socialLinks } from '@/lib/constants';
+
+const iconMap: Record<string, React.ReactNode> = {
+  github: <Github className="w-5 h-5" />,
+  linkedin: <Linkedin className="w-5 h-5" />,
+  twitter: <Twitter className="w-5 h-5" />,
+};
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -57,7 +63,7 @@ export default function Footer() {
                   className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
                   aria-label={link.platform}
                 >
-                  <link.icon className="w-5 h-5" />
+                  {iconMap[link.icon]}
                 </a>
               ))}
             </div>
