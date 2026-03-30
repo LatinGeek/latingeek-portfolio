@@ -1,84 +1,77 @@
 'use client';
 
 import { useState } from 'react';
-import { useTranslations } from 'next-intl';
 import { motion } from 'framer-motion';
-import { Send, Mail, MapPin, Phone, CheckCircle, AlertCircle } from 'lucide-react';
-import bio from '@/content/bio.json';
-
-type FormData = {
-  name: string;
-  email: string;
-  message: string;
-};
-
-type FormStatus = 'idle' | 'submitting' | 'success' | 'error';
+import { Send, Mail, MapPin, Phone } from 'lucide-react';
 
 export default function Contact() {
-  const t = useTranslations('contact');
-  const [formData, setFormData] = useState<FormData>({
+  const [formData, setFormData] = useState({
     name: '',
     email: '',
     message: '',
   });
-  const [status, setStatus] = useState<FormStatus>('idle');
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setStatus('submitting');
-
-    // Simulate API call
+    setIsSubmitting(true);
+    
+    // Simulate form submission
     setTimeout(() => {
-      // In a real app, this would be:
-      // await fetch('/api/contact', { method: 'POST', body: JSON.stringify(formData) })
-      
-      // For now, simulate success
-      setStatus('success');
+      setIsSubmitting(false);
+      setSubmitStatus('success');
       setFormData({ name: '', email: '', message: '' });
       
-      // Reset after 3 seconds
-      setTimeout(() => setStatus('idle'), 3000);
+      // Reset status after 5 seconds
+      setTimeout(() => setSubmitStatus('idle'), 5000);
     }, 1500);
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({ ...prev, [name]: value }));
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value,
+    });
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900">
+    <section id="contact" className="py-20 bg-gray-900/50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.5 }}
-          className="text-center mb-16"
-        >
-          <h2 className="text-4xl md:text-5xl font-bold mb-4">
-            <span className="gradient-text">{t('title')}</span>
-          </h2>
-          <p className="text-xl text-gray-400 max-w-2xl mx-auto">
-            {t('subtitle')}
-          </p>
-        </motion.div>
-
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* Contact Form */}
+        <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
           <motion.div
-            initial={{ opacity: 0, x: -20 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.1 }}
+            transition={{ duration: 0.5 }}
+            className="text-center mb-16"
           >
-            <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4">
+              <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
+                Get In Touch
+              </span>
+            </h2>
+            <p className="text-xl text-gray-400 max-w-3xl mx-auto">
+              Have a project in mind or just want to chat? I'd love to hear from you.
+            </p>
+          </motion.div>
+
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            {/* Contact Form */}
+            <motion.div
+              initial={{ opacity: 0, x: -20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5 }}
+              className="bg-gray-900/30 rounded-2xl p-8 border border-gray-800"
+            >
+              <h3 className="text-2xl font-bold text-white mb-6">Send me a message</h3>
+              
               <form onSubmit={handleSubmit} className="space-y-6">
-                {/* Name Field */}
                 <div>
                   <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    {t('name')}
+                    Your Name
                   </label>
                   <input
                     type="text"
@@ -87,15 +80,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="John Doe"
                   />
                 </div>
 
-                {/* Email Field */}
                 <div>
                   <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    {t('email')}
+                    Email Address
                   </label>
                   <input
                     type="email"
@@ -104,15 +96,14 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
                     placeholder="john@example.com"
                   />
                 </div>
 
-                {/* Message Field */}
                 <div>
                   <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    {t('message')}
+                    Your Message
                   </label>
                   <textarea
                     id="message"
@@ -121,136 +112,121 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-900 border border-gray-700 rounded-lg text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
+                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
                     placeholder="Tell me about your project..."
                   />
                 </div>
 
-                {/* Submit Button */}
                 <button
                   type="submit"
-                  disabled={status === 'submitting'}
-                  className="w-full py-4 px-6 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed flex items-center justify-center space-x-2"
+                  disabled={isSubmitting}
+                  className="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  {status === 'submitting' ? (
+                  {isSubmitting ? (
                     <>
-                      <div className="w-5 h-5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
-                      <span>{t('sending')}</span>
+                      <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
+                      Sending...
                     </>
                   ) : (
                     <>
-                      <Send className="w-5 h-5" />
-                      <span>{t('send')}</span>
+                      Send Message
+                      <Send className="ml-2 w-5 h-5" />
                     </>
                   )}
                 </button>
 
-                {/* Status Messages */}
-                {status === 'success' && (
+                {submitStatus === 'success' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center space-x-3 p-4 rounded-lg bg-green-500/10 border border-green-500/30"
+                    className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-center"
                   >
-                    <CheckCircle className="w-5 h-5 text-green-400" />
-                    <span className="text-green-400">{t('success')}</span>
+                    Message sent successfully! I'll get back to you soon.
                   </motion.div>
                 )}
 
-                {status === 'error' && (
+                {submitStatus === 'error' && (
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="flex items-center space-x-3 p-4 rounded-lg bg-red-500/10 border border-red-500/30"
+                    className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-center"
                   >
-                    <AlertCircle className="w-5 h-5 text-red-400" />
-                    <span className="text-red-400">{t('error')}</span>
+                    Something went wrong. Please try again or email me directly.
                   </motion.div>
                 )}
               </form>
-            </div>
-          </motion.div>
+            </motion.div>
 
-          {/* Contact Information */}
-          <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.5, delay: 0.2 }}
-            className="space-y-8"
-          >
-            {/* Contact Cards */}
-            <div className="bg-gray-800/50 rounded-2xl p-8 border border-gray-700">
-              <h3 className="text-2xl font-bold text-white mb-6">
-                Get in Touch
-              </h3>
-              
+            {/* Contact Info */}
+            <motion.div
+              initial={{ opacity: 0, x: 20 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: 0.1 }}
+              className="space-y-8"
+            >
+              <div>
+                <h3 className="text-2xl font-bold text-white mb-6">Let's work together</h3>
+                <p className="text-gray-400 mb-8 leading-relaxed">
+                  I'm currently available for freelance projects and full-time opportunities. 
+                  Whether you need a complete web application, a redesign, or technical consultation, 
+                  I'm here to help bring your ideas to life.
+                </p>
+              </div>
+
+              {/* Contact Details */}
               <div className="space-y-6">
-                {/* Email */}
-                <a
-                  href={`mailto:${bio.email}`}
-                  className="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50 hover:bg-gray-800 transition-colors group"
-                >
-                  <div className="w-12 h-12 rounded-lg bg-blue-500/20 flex items-center justify-center group-hover:bg-blue-500/30 transition-colors">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 rounded-lg bg-blue-500/10">
                     <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Email</p>
-                    <p className="text-white font-medium group-hover:text-blue-400 transition-colors">
-                      {bio.email}
-                    </p>
+                    <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
+                    <a 
+                      href="mailto:germanlamela@example.com" 
+                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                    >
+                      germanlamela@example.com
+                    </a>
                   </div>
-                </a>
+                </div>
 
-                {/* Location */}
-                <div className="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
-                  <div className="w-12 h-12 rounded-lg bg-purple-500/20 flex items-center justify-center">
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 rounded-lg bg-purple-500/10">
                     <MapPin className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Location</p>
-                    <p className="text-white font-medium">{bio.location}</p>
+                    <h4 className="text-lg font-semibold text-white mb-1">Location</h4>
+                    <p className="text-gray-400">Montevideo, Uruguay</p>
+                    <p className="text-sm text-gray-500 mt-1">Available for remote work worldwide</p>
                   </div>
                 </div>
 
-                {/* Availability */}
-                <div className="flex items-center space-x-4 p-4 rounded-lg bg-gray-900/50">
-                  <div className="w-12 h-12 rounded-lg bg-green-500/20 flex items-center justify-center">
-                    <div className="w-3 h-3 rounded-full bg-green-400 animate-pulse" />
+                <div className="flex items-start space-x-4">
+                  <div className="p-3 rounded-lg bg-green-500/10">
+                    <Phone className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <p className="text-sm text-gray-400">Availability</p>
-                    <p className="text-white font-medium">Open to new opportunities</p>
-                    <p className="text-gray-400 text-sm">Response within 24 hours</p>
+                    <h4 className="text-lg font-semibold text-white mb-1">Response Time</h4>
+                    <p className="text-gray-400">Typically within 24 hours</p>
                   </div>
                 </div>
               </div>
-            </div>
 
-            {/* Quick Note */}
-            <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-2xl p-8 border border-blue-500/30">
-              <h4 className="text-xl font-bold text-white mb-4">
-                Let's Build Something Amazing
-              </h4>
-              <p className="text-gray-300 mb-6">
-                Whether you have a project in mind, need technical consultation, or just want to connect, I'd love to hear from you.
-              </p>
-              <div className="space-y-3">
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-green-400" />
-                  <span className="text-gray-300">Full-stack development</span>
+              {/* Availability */}
+              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
+                <h4 className="text-lg font-semibold text-white mb-3">Current Availability</h4>
+                <div className="flex items-center space-x-2 mb-3">
+                  <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
+                  <span className="text-green-400 font-medium">Available for new projects</span>
                 </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-blue-400" />
-                  <span className="text-gray-300">Technical consultation</span>
-                </div>
-                <div className="flex items-center space-x-2">
-                  <div className="w-2 h-2 rounded-full bg-purple-400" />
-                  <span className="text-gray-300">Project collaboration</span>
-                </div>
+                <p className="text-gray-400 text-sm">
+                  I'm currently taking on new clients and opportunities. Let's schedule a call 
+                  to discuss how I can help with your project.
+                </p>
               </div>
-            </div>
-          </motion.div>
+            </motion.div>
+          </div>
         </div>
       </div>
     </section>
