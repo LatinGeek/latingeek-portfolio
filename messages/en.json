@@ -17,5 +17,56 @@
     "description": "I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive.",
     "viewWork": "View My Work",
     "getInTouch": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Get to know the person behind the code",
+    "journey": "My Journey",
+    "skills": "What I Bring",
+    "philosophy": "My Philosophy",
+    "philosophyText": "I believe in building software that not only works flawlessly but also delivers exceptional user experiences. Clean code, thoughtful design, and continuous learning are at the core of everything I do."
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent work that I'm particularly proud of",
+    "viewAll": "View All Projects on GitHub",
+    "viewMore": "Want to see more? Check out my GitHub for additional projects and contributions.",
+    "highlights": "Highlights",
+    "featured": "Featured",
+    "status": "Status",
+    "category": "Category",
+    "year": "Year",
+    "viewLive": "View Live",
+    "viewCode": "View Code"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind or just want to chat? I'd love to hear from you.",
+    "sendMessage": "Send me a message",
+    "name": "Your Name",
+    "email": "Email Address",
+    "message": "Your Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully! I'll get back to you soon.",
+    "error": "Something went wrong. Please try again or email me directly.",
+    "workTogether": "Let's work together",
+    "workText": "I'm currently available for freelance projects and full-time opportunities. Whether you need a complete web application, a redesign, or technical consultation, I'm here to help bring your ideas to life.",
+    "emailLabel": "Email",
+    "location": "Location",
+    "remote": "Available for remote work worldwide",
+    "responseTime": "Response Time",
+    "availability": "Current Availability",
+    "available": "Available for new projects",
+    "availabilityText": "I'm currently taking on new clients and opportunities. Let's schedule a call to discuss how I can help with your project."
+  },
+  "footer": {
+    "description": "Full stack developer building exceptional digital experiences that are fast, accessible, and visually appealing.",
+    "quickLinks": "Quick Links",
+    "connect": "Connect",
+    "workTogether": "Want to work together?",
+    "rights": "All rights reserved.",
+    "builtWith": "Built with",
+    "and": "and"
   }
 }

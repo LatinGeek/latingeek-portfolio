@@ -2,6 +2,8 @@
 
 import { motion } from 'framer-motion';
 import { ExternalLink, Github, Star } from 'lucide-react';
+import { useTranslations } from 'next-intl';
+import Image from 'next/image';
 import projects from '@/content/projects.json';
 
 function getProjectEmoji(projectId: string) {
@@ -17,6 +19,7 @@ function getProjectEmoji(projectId: string) {
 }
 
 export default function Projects() {
+  const t = useTranslations('projects');
   const featuredProjects = projects.filter(project => project.importance === 'primary');
 
   return (
@@ -33,11 +36,11 @@ export default function Projects() {
           >
             <h2 className="text-4xl md:text-5xl font-bold mb-4">
               <span className="bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
-                Featured Projects
+                {t('title')}
               </span>
             </h2>
             <p className="text-xl text-gray-400 max-w-3xl mx-auto">
-              A selection of my recent work that I'm particularly proud of
+              {t('subtitle')}
             </p>
           </motion.div>
 
@@ -53,17 +56,29 @@ export default function Projects() {
                 className="group relative"
               >
                 <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col">
-                  {/* Project Image/Placeholder */}
+                  {/* Project Image */}
                   <div className="relative h-48 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-cyan-500/30" />
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/50" />
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-6xl font-bold text-white/10">{getProjectEmoji(project.id)}</div>
+                    <div className="relative w-full h-full">
+                      {project.image && project.image !== '/projects/rugdollz.jpg' && project.image !== '/projects/glazier-clinics.jpg' && project.image !== '/projects/dematic.jpg' && project.image !== '/projects/smart-snippet.jpg' && project.image !== '/projects/jl-consultorias.jpg' ? (
+                        <Image
+                          src={project.image}
+                          alt={project.title}
+                          fill
+                          className="object-cover opacity-80 hover:opacity-100 transition-opacity"
+                          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                        />
+                      ) : (
+                        <div className="absolute inset-0 flex items-center justify-center">
+                          <div className="text-6xl font-bold text-white/10">{getProjectEmoji(project.id)}</div>
+                        </div>
+                      )}
                     </div>
                     {project.importance === 'primary' && (
                       <div className="absolute top-4 left-4 flex items-center space-x-1 px-3 py-1 rounded-full bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30">
                         <Star className="w-3 h-3 text-yellow-400" />
-                        <span className="text-xs font-medium text-yellow-300">Featured</span>
+                        <span className="text-xs font-medium text-yellow-300">{t('featured')}</span>
                       </div>
                     )}
                   </div>
@@ -117,7 +132,7 @@ export default function Projects() {
                     {/* Project Highlights */}
                     {project.features && project.features.length > 0 && (
                       <div className="pt-4 border-t border-gray-800">
-                        <h4 className="text-sm font-semibold text-gray-300 mb-2">Highlights</h4>
+                        <h4 className="text-sm font-semibold text-gray-300 mb-2">{t('highlights')}</h4>
                         <ul className="space-y-1">
                           {project.features.slice(0, 2).map((feature, i) => (
                             <li key={i} className="text-sm text-gray-400 flex items-start">

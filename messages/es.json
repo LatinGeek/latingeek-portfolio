@@ -17,5 +17,56 @@
     "description": "Construyo experiencias digitales excepcionales que son rápidas, accesibles, visualmente atractivas y responsivas.",
     "viewWork": "Ver Mi Trabajo",
     "getInTouch": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Conoce a la persona detrás del código",
+    "journey": "Mi Trayectoria",
+    "skills": "Lo Que Ofrezco",
+    "philosophy": "Mi Filosofía",
+    "philosophyText": "Creo en construir software que no solo funcione perfectamente, sino que también ofrezca experiencias de usuario excepcionales. Código limpio, diseño cuidadoso y aprendizaje continuo están en el centro de todo lo que hago."
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de mi trabajo reciente del que estoy particularmente orgulloso",
+    "viewAll": "Ver Todos los Proyectos en GitHub",
+    "viewMore": "¿Quieres ver más? Revisa mi GitHub para proyectos adicionales y contribuciones.",
+    "highlights": "Destacados",
+    "featured": "Destacado",
+    "status": "Estado",
+    "category": "Categoría",
+    "year": "Año",
+    "viewLive": "Ver Sitio",
+    "viewCode": "Ver Código"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¿Tienes un proyecto en mente o solo quieres charlar? Me encantaría saber de ti.",
+    "sendMessage": "Envíame un mensaje",
+    "name": "Tu Nombre",
+    "email": "Correo Electrónico",
+    "message": "Tu Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado con éxito! Me pondré en contacto contigo pronto.",
+    "error": "Algo salió mal. Por favor intenta nuevamente o envíame un correo directamente.",
+    "workTogether": "Trabajemos Juntos",
+    "workText": "Actualmente estoy disponible para proyectos freelance y oportunidades a tiempo completo. Ya sea que necesites una aplicación web completa, un rediseño o consultoría técnica, estoy aquí para ayudar a dar vida a tus ideas.",
+    "emailLabel": "Correo",
+    "location": "Ubicación",
+    "remote": "Disponible para trabajo remoto mundial",
+    "responseTime": "Tiempo de Respuesta",
+    "availability": "Disponibilidad Actual",
+    "available": "Disponible para nuevos proyectos",
+    "availabilityText": "Actualmente estoy aceptando nuevos clientes y oportunidades. Agendemos una llamada para discutir cómo puedo ayudar con tu proyecto."
+  },
+  "footer": {
+    "description": "Desarrollador full stack construyendo experiencias digitales excepcionales que son rápidas, accesibles y visualmente atractivas.",
+    "quickLinks": "Enlaces Rápidos",
+    "connect": "Conectar",
+    "workTogether": "¿Quieres trabajar juntos?",
+    "rights": "Todos los derechos reservados.",
+    "builtWith": "Construido con",
+    "and": "y"
   }
 }
