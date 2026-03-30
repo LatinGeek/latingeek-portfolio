@@ -4,6 +4,18 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, Star } from 'lucide-react';
 import projects from '@/content/projects.json';
 
+function getProjectEmoji(projectId: string) {
+  const emojiMap: Record<string, string> = {
+    'rugdollz': '🦊',
+    'glazier-clinics': '🏥',
+    'dematic': '🏭',
+    'portfolio': '🎨',
+    'weather-app': '☀️',
+    'task-manager': '✅'
+  };
+  return emojiMap[projectId] || '🚀';
+}
+
 export default function Projects() {
   const featuredProjects = projects.filter(project => project.importance === 'primary');
 
@@ -42,12 +54,14 @@ export default function Projects() {
               >
                 <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col">
                   {/* Project Image/Placeholder */}
-                  <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
+                  <div className="relative h-48 overflow-hidden">
+                    <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-cyan-500/30" />
+                    <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/50" />
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-white/20">🚀</div>
+                      <div className="text-6xl font-bold text-white/10">{getProjectEmoji(project.id)}</div>
                     </div>
                     {project.importance === 'primary' && (
-                      <div className="absolute top-4 left-4 flex items-center space-x-1 px-3 py-1 rounded-full bg-yellow-500/20 border border-yellow-500/30">
+                      <div className="absolute top-4 left-4 flex items-center space-x-1 px-3 py-1 rounded-full bg-yellow-500/20 backdrop-blur-sm border border-yellow-500/30">
                         <Star className="w-3 h-3 text-yellow-400" />
                         <span className="text-xs font-medium text-yellow-300">Featured</span>
                       </div>

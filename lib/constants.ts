@@ -5,9 +5,9 @@ export type Locale = (typeof locales)[number];
 // Navigation
 export const navLinks = [
   { href: '/', key: 'home' },
-  { href: '/about', key: 'about' },
-  { href: '/projects', key: 'projects' },
-  { href: '/contact', key: 'contact' },
+  { href: '#about', key: 'about' },
+  { href: '#projects', key: 'projects' },
+  { href: '#contact', key: 'contact' },
 ] as const;
 
 // Social links
