@@ -45,7 +45,7 @@ export default function About() {
             >
               <h3 className="text-2xl font-bold text-white">My Journey</h3>
               <div className="space-y-4 text-gray-300 leading-relaxed">
-                {bio.paragraphs.map((paragraph, index) => (
+                {bio.longBio.split('\n\n').map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
