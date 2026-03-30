@@ -5,7 +5,7 @@ import { ExternalLink, Github, Star } from 'lucide-react';
 import projects from '@/content/projects.json';
 
 export default function Projects() {
-  const featuredProjects = projects.filter(project => project.featured);
+  const featuredProjects = projects.filter(project => project.importance === 'primary');
 
   return (
     <section id="projects" className="py-20">
@@ -46,7 +46,7 @@ export default function Projects() {
                     <div className="absolute inset-0 flex items-center justify-center">
                       <div className="text-4xl font-bold text-white/20">{project.emoji}</div>
                     </div>
-                    {project.featured && (
+                    {project.importance === 'primary' && (
                       <div className="absolute top-4 left-4 flex items-center space-x-1 px-3 py-1 rounded-full bg-yellow-500/20 border border-yellow-500/30">
                         <Star className="w-3 h-3 text-yellow-400" />
                         <span className="text-xs font-medium text-yellow-300">Featured</span>
@@ -89,7 +89,7 @@ export default function Projects() {
                       
                       {/* Tech Stack */}
                       <div className="flex flex-wrap gap-2 mb-4">
-                        {project.techStack.map((tech) => (
+                        {project.technologies.map((tech) => (
                           <span
                             key={tech}
                             className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
@@ -101,14 +101,14 @@ export default function Projects() {
                     </div>
 
                     {/* Project Highlights */}
-                    {project.highlights && project.highlights.length > 0 && (
+                    {project.features && project.features.length > 0 && (
                       <div className="pt-4 border-t border-gray-800">
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">Highlights</h4>
                         <ul className="space-y-1">
-                          {project.highlights.slice(0, 2).map((highlight, i) => (
+                          {project.features.slice(0, 2).map((feature, i) => (
                             <li key={i} className="text-sm text-gray-400 flex items-start">
                               <span className="text-blue-400 mr-2">•</span>
-                              {highlight}
+                              {feature}
                             </li>
                           ))}
                         </ul>
