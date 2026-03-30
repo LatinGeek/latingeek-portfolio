@@ -2,16 +2,14 @@
 
 import { useState } from 'react';
 import Link from 'next/link';
+import { useTranslations, useLocale } from 'next-intl';
 import { Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { href: '/', key: 'home', label: 'Home' },
-  { href: '#about', key: 'about', label: 'About' },
-  { href: '#projects', key: 'projects', label: 'Projects' },
-  { href: '#contact', key: 'contact', label: 'Contact' },
-];
+import { navLinks } from '@/lib/constants';
+import LanguageSwitcher from './LanguageSwitcher';
 
 export default function Header() {
+  const t = useTranslations('navigation');
+  const locale = useLocale();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   return (
@@ -19,7 +17,7 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-2">
+          <Link href={`/${locale}`} className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg" />
             <span className="text-xl font-bold bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent">
               Latingeek
@@ -31,13 +29,14 @@ export default function Header() {
             {navLinks.map((link) => (
               <Link
                 key={link.key}
-                href={link.href}
+                href={`/${locale}${link.href === '/' ? '' : link.href}`}
                 className="text-gray-300 hover:text-white transition-colors duration-200 relative group"
               >
-                {link.label}
+                {t(link.key)}
                 <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 group-hover:w-full transition-all duration-300" />
               </Link>
             ))}
+            <LanguageSwitcher />
           </nav>
 
           {/* Mobile menu button */}
@@ -57,13 +56,16 @@ export default function Header() {
               {navLinks.map((link) => (
                 <Link
                   key={link.key}
-                  href={link.href}
+                  href={`/${locale}${link.href === '/' ? '' : link.href}`}
                   className="text-gray-300 hover:text-white px-4 py-2 rounded-lg hover:bg-gray-800 transition-colors"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  {link.label}
+                  {t(link.key)}
                 </Link>
               ))}
+              <div className="px-4 py-2">
+                <LanguageSwitcher />
+              </div>
             </div>
           </div>
         )}

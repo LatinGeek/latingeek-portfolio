@@ -3,8 +3,11 @@
 import { motion } from 'framer-motion';
 import { ArrowRight, Sparkles } from 'lucide-react';
 import Link from 'next/link';
+import { useTranslations } from 'next-intl';
 
 export default function Hero() {
+  const t = useTranslations('hero');
+
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
       {/* Background gradient */}
@@ -22,7 +25,7 @@ export default function Hero() {
           >
             <Sparkles className="w-5 h-5 text-yellow-400" />
             <span className="text-lg font-medium text-gray-300">
-              Hello, I'm
+              {t('greeting')}
             </span>
           </motion.div>
 
@@ -34,11 +37,11 @@ export default function Hero() {
             className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold mb-4"
           >
             <span className="bg-gradient-to-r from-blue-400 via-purple-400 to-cyan-400 bg-clip-text text-transparent">
-              German Lamela
+              {t('name')}
             </span>
             <br />
             <span className="text-2xl sm:text-3xl md:text-4xl text-gray-400">
-              aka Latingeek
+              {t('aka')}
             </span>
           </motion.h1>
 
@@ -52,7 +55,7 @@ export default function Hero() {
             <div className="inline-flex items-center px-4 py-2 rounded-full bg-gradient-to-r from-blue-500/20 to-purple-500/20 border border-blue-500/30">
               <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse mr-2" />
               <span className="text-lg font-medium text-gray-200">
-                Full Stack Developer
+                {t('title')}
               </span>
             </div>
           </motion.div>
@@ -64,7 +67,7 @@ export default function Hero() {
             transition={{ duration: 0.5, delay: 0.3 }}
             className="text-xl text-gray-400 mb-12 max-w-2xl mx-auto leading-relaxed"
           >
-            I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive.
+            {t('description')}
           </motion.p>
 
           {/* CTA Buttons */}
@@ -78,7 +81,7 @@ export default function Hero() {
               href="#projects"
               className="group inline-flex items-center justify-center px-8 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 transform hover:-translate-y-1"
             >
-              View My Work
+              {t('viewWork')}
               <ArrowRight className="ml-2 w-5 h-5 group-hover:translate-x-1 transition-transform" />
             </Link>
             
@@ -86,7 +89,7 @@ export default function Hero() {
               href="#contact"
               className="inline-flex items-center justify-center px-8 py-4 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300"
             >
-              Get In Touch
+              {t('getInTouch')}
             </Link>
           </motion.div>
         </div>
