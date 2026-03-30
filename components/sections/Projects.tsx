@@ -60,9 +60,9 @@ export default function Projects() {
                       <div className="flex items-start justify-between mb-3">
                         <h3 className="text-xl font-bold text-white">{project.title}</h3>
                         <div className="flex items-center space-x-2">
-                          {project.github && (
+                          {project.githubUrl && (
                             <a
-                              href={project.github}
+                              href={project.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
                               className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
