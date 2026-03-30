@@ -21,7 +21,7 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { locale } = await params;
-  const messages = await getMessages(locale);
+  const messages = await getMessages({ locale });
   const metadata = messages.metadata as any;
   
   return {
@@ -53,7 +53,7 @@ export default async function LocaleLayout({
   }
 
   // Load messages for the current locale
-  const messages = await getMessages(locale);
+  const messages = await getMessages({ locale });
 
   return (
     <html lang={locale} className="scroll-smooth">
