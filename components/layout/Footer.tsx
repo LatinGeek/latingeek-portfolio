@@ -50,12 +50,12 @@ export default function Footer() {
             <div className="flex space-x-4">
               {socialLinks.map((link) => (
                 <a
-                  key={link.name}
+                  key={link.platform}
                   href={link.url}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
-                  aria-label={link.name}
+                  aria-label={link.platform}
                 >
                   <link.icon className="w-5 h-5" />
                 </a>
