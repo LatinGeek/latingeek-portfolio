@@ -15,6 +15,10 @@ export default function Error({
     console.error(error);
   }, [error]);
 
+  const handleReset = () => {
+    reset();
+  };
+
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-950">
       <div className="text-center px-4 max-w-md">
@@ -38,7 +42,7 @@ export default function Error({
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
           <button
-            onClick={reset}
+            onClick={handleReset}
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             <RefreshCw className="w-5 h-5 mr-2" />
