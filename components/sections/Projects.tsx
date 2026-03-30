@@ -44,7 +44,7 @@ export default function Projects() {
                   {/* Project Image/Placeholder */}
                   <div className="relative h-48 bg-gradient-to-br from-blue-500/20 to-purple-500/20 overflow-hidden">
                     <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="text-4xl font-bold text-white/20">{project.emoji}</div>
+                      <div className="text-4xl font-bold text-white/20">🚀</div>
                     </div>
                     {project.importance === 'primary' && (
                       <div className="absolute top-4 left-4 flex items-center space-x-1 px-3 py-1 rounded-full bg-yellow-500/20 border border-yellow-500/30">
