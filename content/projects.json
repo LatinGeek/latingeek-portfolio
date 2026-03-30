@@ -1,24 +1,28 @@
 [
   {
     "id": "rugdollz",
-    "title": "Rugdollz NFT Platform",
-    "description": "A full-stack NFT marketplace and community platform for the Rugdollz NFT collection, featuring minting, trading, staking, and community features.",
-    "longDescription": "Rugdollz is a comprehensive NFT ecosystem built with modern web3 technologies. The platform includes a minting dashboard, marketplace with real-time bidding, staking rewards system, and community governance features. Implemented secure wallet integration, real-time updates, and responsive design.",
-    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Solidity", "Ethers.js", "IPFS", "Node.js", "PostgreSQL"],
+    "title": "Rugdollz Central Hub",
+    "description": "A comprehensive Web3 gaming platform for the Rugdollz NFT collection featuring battle arenas, staking, breeding, item systems, and community governance.",
+    "longDescription": "Rugdollz Central Hub is a full-featured Web3 gaming platform built with Next.js 15, featuring real-time battle arenas, NFT staking with rewards, breeding mechanics, item systems, and community governance. The platform integrates with Ethereum blockchain via Alchemy SDK, uses Firebase for real-time data, and includes advanced features like animation synchronization, battle expiration systems, and database integrity management. Key achievements include implementing a fast-forward system for game state synchronization, fixing race conditions in battle mechanics, and creating a scalable architecture supporting thousands of concurrent users.",
+    "technologies": ["Next.js 15", "TypeScript", "Tailwind CSS", "Firebase", "Alchemy SDK", "Ethers.js", "Viem", "Wagmi", "React Query", "Framer Motion", "Upstash Redis", "Vercel"],
     "features": [
-      "NFT minting with whitelist support",
-      "Real-time marketplace with bidding",
-      "Staking rewards system",
-      "Community governance dashboard",
-      "Wallet integration (MetaMask, WalletConnect)",
-      "Responsive mobile-first design"
+      "Real-time battle arenas with PvP combat",
+      "NFT staking with yield farming rewards",
+      "Breeding mechanics for new NFT generation",
+      "Item system with stat boosts and effects",
+      "Community governance and voting",
+      "Animation synchronization across clients",
+      "Battle expiration and auto-resolution",
+      "Database integrity and fast-forward systems",
+      "Wallet integration (MetaMask, Coinbase, WalletConnect)",
+      "Admin dashboard with analytics"
     ],
     "liveUrl": "https://rugdollz.io",
     "githubUrl": null,
     "image": "/projects/rugdollz.jpg",
-    "status": "Live",
+    "status": "Live & Actively Developed",
     "year": 2024,
-    "category": "Web3 / NFT",
+    "category": "Web3 Gaming / NFT Platform",
     "importance": "primary"
   },
   {
