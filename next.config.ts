@@ -5,6 +5,9 @@ const withNextIntl = createNextIntlPlugin('./lib/i18n.ts');
 
 const nextConfig: NextConfig = {
   /* config options here */
+  experimental: {
+    turbo: false
+  }
 };
 
 export default withNextIntl(nextConfig);
