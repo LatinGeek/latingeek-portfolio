@@ -1,0 +1,118 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 248, 250, 252;
+  --background-start-rgb: 15, 23, 42;
+  --background-end-rgb: 30, 41, 59;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: rgb(var(--foreground-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #334155;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #475569;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(59, 130, 246, 0.5);
+  color: #ffffff;
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+/* Gradient text utility */
+.gradient-text {
+  @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent;
+}
+
+/* Glass effect */
+.glass {
+  @apply backdrop-blur-md bg-white/5 border border-white/10;
+}
+
+/* Card hover effect */
+.card-hover {
+  @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-2xl;
+}
+
+/* Animated gradient border */
+.gradient-border {
+  position: relative;
+  background: linear-gradient(#0f172a, #0f172a) padding-box,
+              linear-gradient(135deg, #3b82f6, #8b5cf6, #06b6d4) border-box;
+  border: 2px solid transparent;
+}
+
+/* Pulse animation */
+@keyframes pulse-glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(59, 130, 246, 0.6);
+  }
+}
+
+.pulse-glow {
+  animation: pulse-glow 2s infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in-up {
+  animation: fadeInUp 0.6s ease-out;
+}
+
+/* Container utility */
+.container {
+  @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+}

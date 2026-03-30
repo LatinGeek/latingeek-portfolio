@@ -1,0 +1,112 @@
+[
+  {
+    "id": "rugdollz",
+    "title": "Rugdollz NFT Platform",
+    "description": "A full-stack NFT marketplace and community platform for the Rugdollz NFT collection, featuring minting, trading, staking, and community features.",
+    "longDescription": "Rugdollz is a comprehensive NFT ecosystem built with modern web3 technologies. The platform includes a minting dashboard, marketplace with real-time bidding, staking rewards system, and community governance features. Implemented secure wallet integration, real-time updates, and responsive design.",
+    "technologies": ["Next.js", "TypeScript", "Tailwind CSS", "Solidity", "Ethers.js", "IPFS", "Node.js", "PostgreSQL"],
+    "features": [
+      "NFT minting with whitelist support",
+      "Real-time marketplace with bidding",
+      "Staking rewards system",
+      "Community governance dashboard",
+      "Wallet integration (MetaMask, WalletConnect)",
+      "Responsive mobile-first design"
+    ],
+    "liveUrl": "https://rugdollz.io",
+    "githubUrl": null,
+    "image": "/projects/rugdollz.jpg",
+    "status": "Live",
+    "year": 2024,
+    "category": "Web3 / NFT",
+    "importance": "primary"
+  },
+  {
+    "id": "glazier-clinics",
+    "title": "Glazier Clinics Healthcare Platform",
+    "description": "A healthcare management platform for Glazier Clinics, providing patient management, appointment scheduling, and telemedicine features.",
+    "longDescription": "Developed a comprehensive healthcare platform for Glazier Clinics featuring patient management, appointment scheduling, electronic health records (EHR), telemedicine integration, and billing system. The platform improved clinic efficiency by 40% and patient satisfaction scores.",
+    "technologies": ["React", "Node.js", "Express", "MongoDB", "Socket.io", "Twilio", "Stripe"],
+    "features": [
+      "Patient management and EHR",
+      "Appointment scheduling system",
+      "Telemedicine video consultations",
+      "Secure messaging platform",
+      "Billing and payment integration",
+      "Admin dashboard with analytics"
+    ],
+    "liveUrl": null,
+    "githubUrl": null,
+    "image": "/projects/glazier-clinics.jpg",
+    "status": "Completed",
+    "year": 2023,
+    "category": "Healthcare / SaaS",
+    "importance": "secondary"
+  },
+  {
+    "id": "dematic",
+    "title": "Dematic Warehouse Management",
+    "description": "Custom warehouse management dashboard for Dematic, providing real-time inventory tracking, logistics optimization, and reporting.",
+    "longDescription": "Built a custom warehouse management dashboard for Dematic that integrated with their existing logistics systems. The dashboard provided real-time inventory tracking, shipment monitoring, predictive analytics for stock levels, and automated reporting. Reduced inventory discrepancies by 25% and improved shipping accuracy.",
+    "technologies": ["Vue.js", "Python", "FastAPI", "PostgreSQL", "Redis", "Docker", "AWS"],
+    "features": [
+      "Real-time inventory tracking",
+      "Shipment monitoring and alerts",
+      "Predictive analytics for stock",
+      "Automated reporting system",
+      "Integration with existing logistics APIs",
+      "Role-based access control"
+    ],
+    "liveUrl": null,
+    "githubUrl": null,
+    "image": "/projects/dematic.jpg",
+    "status": "Completed",
+    "year": 2023,
+    "category": "Logistics / Enterprise",
+    "importance": "secondary"
+  },
+  {
+    "id": "smart-snippet",
+    "title": "SmartSnippet AI Tool",
+    "description": "An AI-powered code snippet manager with intelligent search, syntax highlighting, and team collaboration features.",
+    "longDescription": "SmartSnippet is a developer tool that uses AI to organize, search, and share code snippets. Features include intelligent search using natural language, syntax highlighting for 50+ languages, team collaboration with version control, and integration with popular IDEs.",
+    "technologies": ["React", "TypeScript", "Next.js", "Prisma", "PostgreSQL", "OpenAI API", "Vercel"],
+    "features": [
+      "AI-powered natural language search",
+      "Syntax highlighting for 50+ languages",
+      "Team collaboration with versioning",
+      "VS Code and IntelliJ integration",
+      "Cloud sync across devices",
+      "Export to multiple formats"
+    ],
+    "liveUrl": null,
+    "githubUrl": "https://github.com/LatinGeek/SmartSnippet",
+    "image": "/projects/smart-snippet.jpg",
+    "status": "In Development",
+    "year": 2024,
+    "category": "Developer Tools",
+    "importance": "tertiary"
+  },
+  {
+    "id": "jl-consultorias",
+    "title": "JL Consultorias Website",
+    "description": "Corporate website for JL Consultorias, a business consulting firm, featuring service展示, client testimonials, and contact management.",
+    "longDescription": "Designed and developed a professional corporate website for JL Consultorias, showcasing their services, team, case studies, and client testimonials. Implemented a custom CMS for content management, contact form with CRM integration, and multilingual support.",
+    "technologies": ["Next.js", "Tailwind CSS", "Strapi CMS", "PostgreSQL", "Nodemailer", "Framer Motion"],
+    "features": [
+      "Custom CMS for content management",
+      "Multilingual support (ES/EN)",
+      "Contact form with CRM integration",
+      "Service展示 with interactive elements",
+      "Team management dashboard",
+      "Performance optimized (95+ Lighthouse)"
+    ],
+    "liveUrl": "https://jlconsultorias.com",
+    "githubUrl": "https://github.com/LatinGeek/jl-consultorias",
+    "image": "/projects/jl-consultorias.jpg",
+    "status": "Live",
+    "year": 2023,
+    "category": "Corporate / Business",
+    "importance": "tertiary"
+  }
+]

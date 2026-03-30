@@ -1,0 +1,87 @@
+{
+  "name": "German Lamela",
+  "alias": "Latingeek",
+  "title": "Full Stack Developer",
+  "location": "Montevideo, Uruguay",
+  "email": "contact@latingeek.dev",
+  "github": "https://github.com/LatinGeek",
+  "linkedin": "https://linkedin.com/in/germanlamela",
+  "twitter": "https://twitter.com/latingeek",
+  
+  "shortBio": "Passionate full stack developer specializing in modern web applications, React ecosystems, and scalable cloud solutions. I transform complex problems into elegant, user-friendly digital experiences.",
+  
+  "longBio": "With over 5 years of experience in web development, I specialize in building scalable, performant applications using modern technologies like React, Next.js, Node.js, and cloud platforms. My expertise spans from frontend architecture to backend services and DevOps practices.\n\nI'm passionate about creating intuitive user experiences, optimizing performance, and implementing best practices in code quality and testing. I enjoy tackling complex challenges and collaborating with teams to deliver exceptional digital products.\n\nWhen I'm not coding, I contribute to open-source projects, write technical articles, and mentor aspiring developers.",
+  
+  "skills": {
+    "frontend": [
+      "React / Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "React Query",
+      "Zustand / Redux"
+    ],
+    "backend": [
+      "Node.js / Express",
+      "Python / FastAPI",
+      "PostgreSQL / MongoDB",
+      "Redis",
+      "GraphQL",
+      "REST APIs"
+    ],
+    "devops": [
+      "Docker",
+      "AWS / Vercel",
+      "CI/CD (GitHub Actions)",
+      "Nginx",
+      "Monitoring (Prometheus)",
+      "Linux Administration"
+    ],
+    "tools": [
+      "Git / GitHub",
+      "VS Code",
+      "Figma",
+      "Postman",
+      "Jest / Cypress",
+      "Webpack / Vite"
+    ]
+  },
+  
+  "experience": [
+    {
+      "role": "Full Stack Developer",
+      "company": "Freelance / Contract",
+      "period": "2021 - Present",
+      "description": "Working with various clients to build web applications, from startups to enterprise solutions. Projects include NFT platforms, healthcare systems, and custom SaaS products."
+    },
+    {
+      "role": "Web Developer",
+      "company": "Various Agencies",
+      "period": "2019 - 2021",
+      "description": "Developed websites and web applications for clients across different industries, focusing on responsive design, performance optimization, and user experience."
+    }
+  ],
+  
+  "education": [
+    {
+      "degree": "Computer Science",
+      "institution": "University of the Republic (UdelaR)",
+      "period": "2018 - Present"
+    },
+    {
+      "degree": "Various Online Certifications",
+      "institution": "Coursera, Udemy, FreeCodeCamp",
+      "period": "2017 - Present",
+      "description": "Courses in React, Node.js, AWS, Docker, and software architecture"
+    }
+  ],
+  
+  "interests": [
+    "Web3 & Blockchain Technology",
+    "Open Source Contributions",
+    "Technical Writing & Blogging",
+    "UI/UX Design Principles",
+    "Performance Optimization",
+    "Developer Tooling"
+  ]
+}

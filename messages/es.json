@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "German Lamela | Latingeek - Desarrollador Full Stack",
+    "description": "Portafolio de German Lamela (Latingeek), desarrollador full stack especializado en aplicaciones web modernas, React, Next.js y soluciones en la nube.",
+    "keywords": "desarrollador full stack, React, Next.js, TypeScript, portafolio, desarrollo web"
+  },
+  "navigation": {
+    "home": "Inicio",
+    "about": "Sobre mí",
+    "projects": "Proyectos",
+    "contact": "Contacto"
+  },
+  "hero": {
+    "greeting": "Hola, soy",
+    "name": "German Lamela",
+    "alias": "también conocido como Latingeek",
+    "title": "Desarrollador Full Stack",
+    "description": "Construyo experiencias digitales excepcionales que son rápidas, accesibles, visualmente atractivas y responsivas.",
+    "cta": "Ver Mi Trabajo",
+    "contact": "Contáctame"
+  },
+  "about": {
+    "title": "Sobre Mí",
+    "subtitle": "Desarrollador apasionado con enfoque en tecnologías web modernas",
+    "bio": "Soy un desarrollador full stack con experiencia en la construcción de aplicaciones web escalables usando React, Next.js, Node.js y plataformas en la nube. Disfruto resolviendo problemas complejos y creando experiencias de usuario intuitivas.",
+    "skills": "Habilidades y Tecnologías",
+    "experience": "Experiencia"
+  },
+  "projects": {
+    "title": "Proyectos Destacados",
+    "subtitle": "Una selección de mi trabajo reciente",
+    "viewProject": "Ver Proyecto",
+    "viewCode": "Ver Código",
+    "liveDemo": "Demo en Vivo"
+  },
+  "contact": {
+    "title": "Contáctame",
+    "subtitle": "¿Tienes un proyecto en mente? ¡Trabajemos juntos!",
+    "name": "Nombre",
+    "email": "Correo Electrónico",
+    "message": "Mensaje",
+    "send": "Enviar Mensaje",
+    "sending": "Enviando...",
+    "success": "¡Mensaje enviado exitosamente!",
+    "error": "Algo salió mal. Por favor intenta de nuevo."
+  },
+  "footer": {
+    "copyright": "© {year} German Lamela. Todos los derechos reservados.",
+    "builtWith": "Construido con Next.js & Tailwind CSS"
+  },
+  "language": {
+    "en": "Inglés",
+    "es": "Español"
+  }
+}

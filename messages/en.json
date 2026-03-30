@@ -1,0 +1,55 @@
+{
+  "metadata": {
+    "title": "German Lamela | Latingeek - Full Stack Developer",
+    "description": "Portfolio of German Lamela (Latingeek), a full stack developer specializing in modern web applications, React, Next.js, and cloud solutions.",
+    "keywords": "full stack developer, React, Next.js, TypeScript, portfolio, web development"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "projects": "Projects",
+    "contact": "Contact"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "name": "German Lamela",
+    "alias": "aka Latingeek",
+    "title": "Full Stack Developer",
+    "description": "I build exceptional digital experiences that are fast, accessible, visually appealing, and responsive.",
+    "cta": "View My Work",
+    "contact": "Get In Touch"
+  },
+  "about": {
+    "title": "About Me",
+    "subtitle": "Passionate developer with a focus on modern web technologies",
+    "bio": "I'm a full stack developer with expertise in building scalable web applications using React, Next.js, Node.js, and cloud platforms. I enjoy solving complex problems and creating intuitive user experiences.",
+    "skills": "Skills & Technologies",
+    "experience": "Experience"
+  },
+  "projects": {
+    "title": "Featured Projects",
+    "subtitle": "A selection of my recent work",
+    "viewProject": "View Project",
+    "viewCode": "View Code",
+    "liveDemo": "Live Demo"
+  },
+  "contact": {
+    "title": "Get In Touch",
+    "subtitle": "Have a project in mind? Let's work together!",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "send": "Send Message",
+    "sending": "Sending...",
+    "success": "Message sent successfully!",
+    "error": "Something went wrong. Please try again."
+  },
+  "footer": {
+    "copyright": "© {year} German Lamela. All rights reserved.",
+    "builtWith": "Built with Next.js & Tailwind CSS"
+  },
+  "language": {
+    "en": "English",
+    "es": "Español"
+  }
+}
