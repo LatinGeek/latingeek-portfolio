@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { Code, Globe, Zap, Users } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import bio from '@/content/bio.json';
+import { BioContent } from '@/lib/content-loader';
 
 const skills = [
   { icon: Code, key: 'frontend' },
@@ -13,7 +13,11 @@ const skills = [
   { icon: Users, key: 'softSkills' },
 ];
 
-export default function About() {
+interface AboutProps {
+  bio: BioContent;
+}
+
+export default function About({ bio }: AboutProps) {
   const t = useTranslations('about');
   
   return (

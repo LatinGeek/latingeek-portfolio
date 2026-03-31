@@ -1,0 +1,70 @@
+{
+  "name": "German Lamela",
+  "alias": "Latingeek",
+  "title": "Desarrollador Full Stack",
+  "location": "Montevideo, Uruguay",
+  "email": "contact@latingeek.dev",
+  "github": "https://github.com/LatinGeek",
+  "linkedin": "https://linkedin.com/in/germanlamela",
+  "twitter": "https://twitter.com/latingeek",
+  
+  "shortBio": "Desarrollador full stack apasionado especializado en aplicaciones web modernas, ecosistemas React y soluciones escalables en la nube. Transformo problemas complejos en experiencias digitales elegantes y fáciles de usar.",
+  
+  "longBio": "Con más de 5 años de experiencia en desarrollo web, me especializo en construir aplicaciones escalables y de alto rendimiento utilizando tecnologías modernas como React, Next.js, Node.js y plataformas en la nube. Mi experiencia abarca desde arquitectura frontend hasta servicios backend y prácticas de DevOps.\n\nMe apasiona crear experiencias de usuario intuitivas, optimizar el rendimiento e implementar las mejores prácticas en calidad de código y testing. Disfruto abordar desafíos complejos y colaborar con equipos para entregar productos digitales excepcionales.\n\nCuando no estoy programando, contribuyo a proyectos de código abierto, escribo artículos técnicos y mentorizo a desarrolladores en formación.",
+  
+  "skills": {
+    "frontend": [
+      "React / Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "Framer Motion",
+      "Redux / Zustand",
+      "GraphQL / Apollo",
+      "Webpack / Vite",
+      "Jest / React Testing Library"
+    ],
+    "backend": [
+      "Node.js / Express",
+      "Python / Django",
+      "Firebase",
+      "PostgreSQL / MongoDB",
+      "Redis",
+      "Docker",
+      "AWS / GCP",
+      "REST / GraphQL APIs"
+    ],
+    "tools": [
+      "Git / GitHub",
+      "CI/CD (GitHub Actions)",
+      "Figma / Adobe XD",
+      "Jira / Trello",
+      "VS Code",
+      "Postman",
+      "Chrome DevTools",
+      "Web Performance Tools"
+    ],
+    "softSkills": [
+      "Liderazgo Técnico",
+      "Comunicación Efectiva",
+      "Resolución de Problemas",
+      "Trabajo en Equipo",
+      "Gestión Ágil",
+      "Pensamiento Crítico",
+      "Adaptabilidad",
+      "Mentoría"
+    ]
+  },
+  
+  "philosophy": "Creo en construir software que no solo funcione perfectamente, sino que también ofrezca experiencias de usuario excepcionales. Código limpio, diseño cuidadoso y aprendizaje continuo están en el centro de todo lo que hago.",
+  
+  "interests": [
+    "Desarrollo de Software",
+    "Arquitectura de Sistemas",
+    "Experiencia de Usuario",
+    "Optimización de Rendimiento",
+    "Código Abierto",
+    "Inteligencia Artificial",
+    "Realidad Aumentada",
+    "Blockchain"
+  ]
+}

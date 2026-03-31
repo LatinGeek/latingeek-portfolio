@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { ExternalLink, Github, Star } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 import Image from 'next/image';
-import projects from '@/content/projects.json';
+import { ProjectContent } from '@/lib/content-loader';
 
 function getProjectEmoji(projectId: string) {
   const emojiMap: Record<string, string> = {
@@ -18,7 +18,11 @@ function getProjectEmoji(projectId: string) {
   return emojiMap[projectId] || '🚀';
 }
 
-export default function Projects() {
+interface ProjectsProps {
+  projects: ProjectContent[];
+}
+
+export default function Projects({ projects }: ProjectsProps) {
   const t = useTranslations('projects');
   const featuredProjects = projects.filter(project => project.importance === 'primary');
 
