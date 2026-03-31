@@ -1,7 +1,10 @@
 {
   "metadata": {
     "title": "German Lamela | Latingeek - Full Stack Developer",
-    "description": "Portfolio of German Lamela (Latingeek), a full stack developer specializing in modern web applications."
+    "description": "Portfolio of German Lamela (Latingeek), a full stack developer specializing in modern web applications, React, Next.js, and cloud solutions.",
+    "keywords": "full stack developer, web developer, React, Next.js, TypeScript, portfolio, software engineer",
+    "ogTitle": "German Lamela | Latingeek - Full Stack Developer Portfolio",
+    "ogDescription": "Explore the portfolio of German Lamela (Latingeek), showcasing modern web applications, React projects, and full stack development expertise."
   },
   "navigation": {
     "home": "Home",

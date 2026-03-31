@@ -26,13 +26,80 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const messages = await getMessages({ locale });
   const metadata = messages.metadata as any;
   
+  const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://latingeek-portfolio.vercel.app';
+  const canonicalUrl = `${baseUrl}/${locale}`;
+  const siteName = 'German Lamela | Latingeek';
+  
   return {
     title: metadata.title,
     description: metadata.description,
+    keywords: [
+      'full stack developer',
+      'web developer',
+      'React developer',
+      'Next.js developer',
+      'TypeScript',
+      'portfolio',
+      locale === 'es' ? 'desarrollador full stack' : '',
+      locale === 'es' ? 'desarrollador web' : '',
+      locale === 'es' ? 'portafolio' : '',
+    ].filter(Boolean),
+    authors: [{ name: 'German Lamela' }],
+    creator: 'German Lamela',
+    publisher: 'German Lamela',
+    formatDetection: {
+      email: false,
+      address: false,
+      telephone: false,
+    },
+    metadataBase: new URL(baseUrl),
+    alternates: {
+      canonical: canonicalUrl,
+      languages: {
+        'en': `${baseUrl}/en`,
+        'es': `${baseUrl}/es`,
+      },
+    },
+    openGraph: {
+      type: 'website',
+      locale: locale === 'es' ? 'es_ES' : 'en_US',
+      url: canonicalUrl,
+      title: metadata.ogTitle || metadata.title,
+      description: metadata.ogDescription || metadata.description,
+      siteName,
+      images: [
+        {
+          url: `${baseUrl}/og-image.png`,
+          width: 1200,
+          height: 630,
+          alt: 'German Lamela | Latingeek Portfolio',
+        },
+      ],
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: metadata.ogTitle || metadata.title,
+      description: metadata.ogDescription || metadata.description,
+      images: [`${baseUrl}/og-image.png`],
+      creator: '@latingeek',
+    },
+    robots: {
+      index: true,
+      follow: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
+    },
     icons: {
       icon: '/favicon.svg',
       shortcut: '/favicon.svg',
+      apple: '/apple-touch-icon.png',
     },
+    manifest: '/site.webmanifest',
   };
 }
 
