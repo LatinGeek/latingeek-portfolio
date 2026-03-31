@@ -24,7 +24,23 @@
     "journey": "Mi Trayectoria",
     "skills": "Lo Que Ofrezco",
     "philosophy": "Mi Filosofía",
-    "philosophyText": "Creo en construir software que no solo funcione perfectamente, sino que también ofrezca experiencias de usuario excepcionales. Código limpio, diseño cuidadoso y aprendizaje continuo están en el centro de todo lo que hago."
+    "philosophyText": "Creo en construir software que no solo funcione perfectamente, sino que también ofrezca experiencias de usuario excepcionales. Código limpio, diseño cuidadoso y aprendizaje continuo están en el centro de todo lo que hago.",
+    "stats": {
+      "yearsExperience": "Años de Experiencia",
+      "projectsCompleted": "Proyectos Completados"
+    },
+    "skillCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Herramientas",
+      "softSkills": "Habilidades Blandas"
+    },
+    "skillDescriptions": {
+      "frontend": "React, Next.js, TypeScript, Tailwind CSS",
+      "backend": "Node.js, Python, Firebase, PostgreSQL",
+      "tools": "Git, Docker, AWS, CI/CD, Figma",
+      "softSkills": "Liderazgo de Equipo, Agile, Comunicación, Resolución de Problemas"
+    }
   },
   "projects": {
     "title": "Proyectos Destacados",

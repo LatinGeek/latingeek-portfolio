@@ -7,10 +7,10 @@ import Image from 'next/image';
 import bio from '@/content/bio.json';
 
 const skills = [
-  { icon: Code, label: 'Frontend', description: 'React, Next.js, TypeScript, Tailwind CSS' },
-  { icon: Globe, label: 'Backend', description: 'Node.js, Python, Firebase, PostgreSQL' },
-  { icon: Zap, label: 'Tools', description: 'Git, Docker, AWS, CI/CD, Figma' },
-  { icon: Users, label: 'Soft Skills', description: 'Team Leadership, Agile, Communication, Problem Solving' },
+  { icon: Code, key: 'frontend' },
+  { icon: Globe, key: 'backend' },
+  { icon: Zap, key: 'tools' },
+  { icon: Users, key: 'softSkills' },
 ];
 
 export default function About() {
@@ -76,11 +76,11 @@ export default function About() {
               <div className="grid grid-cols-2 gap-4 pt-6">
                 <div className="rounded-xl border border-gray-700/80 bg-gray-800/50 p-6 text-center">
                   <div className="text-3xl font-bold text-blue-400">5+</div>
-                  <div className="text-gray-400 mt-2">Years Experience</div>
+                  <div className="text-gray-400 mt-2">{t('stats.yearsExperience')}</div>
                 </div>
                 <div className="rounded-xl border border-gray-700/80 bg-gray-800/50 p-6 text-center">
                   <div className="text-3xl font-bold text-purple-400">50+</div>
-                  <div className="text-gray-400 mt-2">Projects Completed</div>
+                  <div className="text-gray-400 mt-2">{t('stats.projectsCompleted')}</div>
                 </div>
               </div>
             </motion.div>
@@ -98,7 +98,7 @@ export default function About() {
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
                 {skills.map((skill, index) => (
                   <motion.div
-                    key={skill.label}
+                    key={skill.key}
                     initial={{ opacity: 0, y: 20 }}
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
@@ -110,8 +110,8 @@ export default function About() {
                         <skill.icon className="w-6 h-6 text-blue-400" />
                       </div>
                       <div>
-                        <h4 className="text-lg font-semibold text-white mb-2">{skill.label}</h4>
-                        <p className="text-gray-400 text-sm">{skill.description}</p>
+                        <h4 className="text-lg font-semibold text-white mb-2">{t(`skillCategories.${skill.key}`)}</h4>
+                        <p className="text-gray-400 text-sm">{t(`skillDescriptions.${skill.key}`)}</p>
                       </div>
                     </div>
                   </motion.div>

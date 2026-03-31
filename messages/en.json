@@ -24,7 +24,23 @@
     "journey": "My Journey",
     "skills": "What I Bring",
     "philosophy": "My Philosophy",
-    "philosophyText": "I believe in building software that not only works flawlessly but also delivers exceptional user experiences. Clean code, thoughtful design, and continuous learning are at the core of everything I do."
+    "philosophyText": "I believe in building software that not only works flawlessly but also delivers exceptional user experiences. Clean code, thoughtful design, and continuous learning are at the core of everything I do.",
+    "stats": {
+      "yearsExperience": "Years Experience",
+      "projectsCompleted": "Projects Completed"
+    },
+    "skillCategories": {
+      "frontend": "Frontend",
+      "backend": "Backend",
+      "tools": "Tools",
+      "softSkills": "Soft Skills"
+    },
+    "skillDescriptions": {
+      "frontend": "React, Next.js, TypeScript, Tailwind CSS",
+      "backend": "Node.js, Python, Firebase, PostgreSQL",
+      "tools": "Git, Docker, AWS, CI/CD, Figma",
+      "softSkills": "Team Leadership, Agile, Communication, Problem Solving"
+    }
   },
   "projects": {
     "title": "Featured Projects",
