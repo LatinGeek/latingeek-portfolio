@@ -5,7 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start"
+    "start": "next start",
+    "lint": "next lint",
+    "test-build": "./test-build.sh",
+    "prepare": "husky"
   },
   "dependencies": {
     "next": "^15.3.6",
@@ -29,6 +32,9 @@
     "@typescript-eslint/eslint-plugin": "^8.0.0",
     "@typescript-eslint/parser": "^8.0.0",
     "eslint": "^9.0.0",
-    "eslint-config-next": "15.3.6"
+    "eslint-config-next": "15.3.6",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.3",
+    "prettier": "^3.3.3"
   }
 }

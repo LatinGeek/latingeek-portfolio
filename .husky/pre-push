@@ -1,0 +1,35 @@
+#!/bin/sh
+. "$(dirname "$0")/_/husky.sh"
+
+echo "🚀 Running pre-push checks..."
+
+# Optional: Run test build before pushing
+# Uncomment if you want to ensure builds pass before pushing
+# echo "🏗️  Running test build..."
+# npm run test-build
+
+# Check if we're pushing to main branch
+CURRENT_BRANCH=$(git branch --show-current)
+if [ "$CURRENT_BRANCH" = "main" ]; then
+    echo "⚠️  Pushing to main branch - ensure tests pass!"
+    
+    # Run TypeScript check
+    echo "🔍 Running TypeScript check..."
+    npx tsc --noEmit --skipLibCheck
+    
+    if [ $? -ne 0 ]; then
+        echo "❌ TypeScript check failed - fix before pushing to main"
+        exit 1
+    fi
+    
+    # Run ESLint
+    echo "🔍 Running ESLint..."
+    npx next lint
+    
+    if [ $? -ne 0 ]; then
+        echo "❌ ESLint check failed - fix before pushing to main"
+        exit 1
+    fi
+fi
+
+echo "✅ Pre-push checks passed!"
