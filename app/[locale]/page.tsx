@@ -1,4 +1,4 @@
-import Hero from '@/components/sections/Hero';
+import PremiumHero from '@/components/sections/PremiumHero';
 import About from '@/components/sections/About';
 import Projects from '@/components/sections/Projects';
 import Contact from '@/components/sections/Contact';
@@ -17,7 +17,7 @@ export default async function HomePage({ params }: HomePageProps) {
 
   return (
     <>
-      <Hero />
+      <PremiumHero />
       <About bio={bio} />
       <Projects projects={projects} />
       <Contact />
