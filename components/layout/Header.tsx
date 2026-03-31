@@ -6,7 +6,7 @@ import { useTranslations, useLocale } from 'next-intl';
 import { usePathname } from 'next/navigation';
 import { Menu, X } from 'lucide-react';
 import { navLinks } from '@/lib/constants';
-import LanguageSwitcher from './LanguageSwitcher';
+import EnhancedLanguageSwitcher from './EnhancedLanguageSwitcher';
 
 export default function Header() {
   const t = useTranslations('navigation');
@@ -42,7 +42,7 @@ export default function Header() {
                 <span className="absolute inset-x-3 -bottom-0.5 h-0.5 origin-left scale-x-0 bg-gradient-to-r from-blue-500 to-purple-500 transition-transform duration-300 group-hover:scale-x-100" />
               </Link>
             ))}
-            <LanguageSwitcher />
+            <EnhancedLanguageSwitcher />
           </nav>
 
           {/* Mobile menu button */}
@@ -71,7 +71,7 @@ export default function Header() {
                 </Link>
               ))}
               <div className="px-4 pt-1">
-                <LanguageSwitcher />
+                <EnhancedLanguageSwitcher />
               </div>
             </div>
           </div>
