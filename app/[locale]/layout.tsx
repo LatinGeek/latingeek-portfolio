@@ -7,6 +7,7 @@ import { notFound } from 'next/navigation';
 import { locales } from '@/lib/constants';
 import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import PerformanceOptimizer from '@/components/performance/PerformanceOptimizer';
+import BrowserCompatibility from '@/components/compatibility/BrowserCompatibility';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import '@/styles/globals.css';
@@ -136,6 +137,11 @@ export default async function LocaleLayout({
               </div>
             </ThemeProvider>
           </PerformanceOptimizer>
+          <BrowserCompatibility 
+            showWarning={process.env.NODE_ENV === 'production'}
+            enablePolyfills={true}
+            testFeatures={process.env.NODE_ENV === 'development'}
+          />
         </NextIntlClientProvider>
       </body>
     </html>
