@@ -70,8 +70,10 @@
     "workText": "Actualmente estoy disponible para proyectos freelance y oportunidades a tiempo completo. Ya sea que necesites una aplicación web completa, un rediseño o consultoría técnica, estoy aquí para ayudar a dar vida a tus ideas.",
     "emailLabel": "Correo",
     "location": "Ubicación",
+    "locationValue": "Montevideo, Uruguay",
     "remote": "Disponible para trabajo remoto mundial",
     "responseTime": "Tiempo de Respuesta",
+    "responseTimeValue": "Normalmente dentro de 24 horas",
     "availability": "Disponibilidad Actual",
     "available": "Disponible para nuevos proyectos",
     "availabilityText": "Actualmente estoy aceptando nuevos clientes y oportunidades. Agendemos una llamada para discutir cómo puedo ayudar con tu proyecto."
@@ -84,5 +86,19 @@
     "rights": "Todos los derechos reservados.",
     "builtWith": "Construido con",
     "and": "y"
+  },
+  "errors": {
+    "404": {
+      "title": "Página No Encontrada",
+      "description": "La página que buscas no existe o ha sido movida.",
+      "backToHome": "Volver al Inicio",
+      "goBack": "Regresar"
+    },
+    "500": {
+      "title": "Error del Servidor",
+      "description": "Algo salió mal en nuestro servidor. Por favor intenta nuevamente más tarde.",
+      "backToHome": "Volver al Inicio",
+      "tryAgain": "Intentar Nuevamente"
+    }
   }
 }

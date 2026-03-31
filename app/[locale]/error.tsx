@@ -3,6 +3,7 @@
 import { useEffect } from 'react';
 import Link from 'next/link';
 import { AlertTriangle, RefreshCw, Home } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function Error({
   error,
@@ -11,6 +12,8 @@ export default function Error({
   error: Error & { digest?: string };
   reset: () => void;
 }) {
+  const t = useTranslations('errors.500');
+  
   useEffect(() => {
     console.error(error);
   }, [error]);
@@ -27,11 +30,11 @@ export default function Error({
         </div>
         
         <h1 className="text-3xl md:text-4xl font-bold text-white mb-4">
-          Something went wrong!
+          {t('title')}
         </h1>
         
         <p className="text-gray-400 mb-6">
-          An unexpected error has occurred. Please try again or return to the homepage.
+          {t('description')}
         </p>
         
         {error.digest && (
@@ -46,7 +49,7 @@ export default function Error({
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             <RefreshCw className="w-5 h-5 mr-2" />
-            Try Again
+            {t('tryAgain')}
           </button>
           
           <Link
@@ -54,7 +57,7 @@ export default function Error({
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300"
           >
             <Home className="w-5 h-5 mr-2" />
-            Go Home
+            {t('backToHome')}
           </Link>
         </div>
       </div>

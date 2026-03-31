@@ -2,8 +2,11 @@
 
 import Link from 'next/link';
 import { Home, ArrowLeft } from 'lucide-react';
+import { useTranslations } from 'next-intl';
 
 export default function NotFound() {
+  const t = useTranslations('errors.404');
+  
   const handleGoBack = () => {
     if (typeof window !== 'undefined') {
       window.history.back();
@@ -24,11 +27,11 @@ export default function NotFound() {
         </h1>
         
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          Page Not Found
+          {t('title')}
         </h2>
         
         <p className="text-gray-400 max-w-md mx-auto mb-8">
-          The page you're looking for doesn't exist or has been moved.
+          {t('description')}
         </p>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -37,7 +40,7 @@ export default function NotFound() {
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300"
           >
             <Home className="w-5 h-5 mr-2" />
-            Back to Home
+            {t('backToHome')}
           </Link>
           
           <button
@@ -45,7 +48,7 @@ export default function NotFound() {
             className="inline-flex items-center justify-center px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300"
           >
             <ArrowLeft className="w-5 h-5 mr-2" />
-            Go Back
+            {t('goBack')}
           </button>
         </div>
       </div>

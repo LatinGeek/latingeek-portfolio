@@ -197,7 +197,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="mb-1 text-lg font-semibold text-white">{t('location')}</h4>
-                    <p className="text-gray-400">Montevideo, Uruguay</p>
+                    <p className="text-gray-400">{t('locationValue')}</p>
                     <p className="mt-1 text-sm text-gray-500">{t('remote')}</p>
                   </div>
                 </div>
@@ -208,7 +208,7 @@ export default function Contact() {
                   </div>
                   <div>
                     <h4 className="mb-1 text-lg font-semibold text-white">{t('responseTime')}</h4>
-                    <p className="text-gray-400">Typically within 24 hours</p>
+                    <p className="text-gray-400">{t('responseTimeValue')}</p>
                   </div>
                 </div>
               </div>

@@ -70,8 +70,10 @@
     "workText": "I'm currently available for freelance projects and full-time opportunities. Whether you need a complete web application, a redesign, or technical consultation, I'm here to help bring your ideas to life.",
     "emailLabel": "Email",
     "location": "Location",
+    "locationValue": "Montevideo, Uruguay",
     "remote": "Available for remote work worldwide",
     "responseTime": "Response Time",
+    "responseTimeValue": "Typically within 24 hours",
     "availability": "Current Availability",
     "available": "Available for new projects",
     "availabilityText": "I'm currently taking on new clients and opportunities. Let's schedule a call to discuss how I can help with your project."
@@ -84,5 +86,19 @@
     "rights": "All rights reserved.",
     "builtWith": "Built with",
     "and": "and"
+  },
+  "errors": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "The page you're looking for doesn't exist or has been moved.",
+      "backToHome": "Back to Home",
+      "goBack": "Go Back"
+    },
+    "500": {
+      "title": "Server Error",
+      "description": "Something went wrong on our end. Please try again later.",
+      "backToHome": "Back to Home",
+      "tryAgain": "Try Again"
+    }
   }
 }
