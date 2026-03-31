@@ -28,6 +28,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return {
     title: metadata.title,
     description: metadata.description,
+    icons: {
+      icon: '/favicon.svg',
+      shortcut: '/favicon.svg',
+    },
   };
 }
 
@@ -49,7 +53,7 @@ export default async function LocaleLayout({
   const messages = await getMessages({ locale });
 
   return (
-    <html lang={locale} className="scroll-smooth">
+    <html lang={locale} className="scroll-smooth" data-scroll-behavior="smooth">
       <body className={`${inter.className} bg-gray-950 text-gray-50 antialiased`}>
         <NextIntlClientProvider messages={messages}>
           <div className="min-h-screen flex flex-col">

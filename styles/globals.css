@@ -11,14 +11,21 @@
   * {
     @apply border-gray-800;
   }
+  html {
+    @apply scroll-smooth;
+  }
   body {
-    @apply bg-gray-950 text-gray-50;
+    @apply bg-gray-950 text-gray-50 selection:bg-blue-500/30 selection:text-white;
   }
 }
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
+  }
+
+  .section-anchor-offset {
+    scroll-margin-top: 5rem;
   }
 }
 

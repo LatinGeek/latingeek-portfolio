@@ -17,7 +17,7 @@ export default function About() {
   const t = useTranslations('about');
   
   return (
-    <section id="about" className="py-20 bg-gray-900/50">
+    <section id="about" className="section-anchor-offset bg-gray-900/40 py-24 sm:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -38,14 +38,14 @@ export default function About() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-14">
             {/* Bio with Avatar */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="space-y-6"
+              className="space-y-6 rounded-2xl border border-gray-800/80 bg-gray-900/30 p-6 shadow-xl shadow-black/20 sm:p-8"
             >
               {/* Avatar in About section */}
               <div className="flex items-center space-x-6 mb-8">
@@ -74,11 +74,11 @@ export default function About() {
               
               {/* Stats */}
               <div className="grid grid-cols-2 gap-4 pt-6">
-                <div className="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700">
+                <div className="rounded-xl border border-gray-700/80 bg-gray-800/50 p-6 text-center">
                   <div className="text-3xl font-bold text-blue-400">5+</div>
                   <div className="text-gray-400 mt-2">Years Experience</div>
                 </div>
-                <div className="bg-gray-800/50 rounded-xl p-6 text-center border border-gray-700">
+                <div className="rounded-xl border border-gray-700/80 bg-gray-800/50 p-6 text-center">
                   <div className="text-3xl font-bold text-purple-400">50+</div>
                   <div className="text-gray-400 mt-2">Projects Completed</div>
                 </div>
@@ -91,7 +91,7 @@ export default function About() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.2 }}
-              className="space-y-8"
+              className="space-y-8 rounded-2xl border border-gray-800/80 bg-gray-900/30 p-6 shadow-xl shadow-black/20 sm:p-8"
             >
               <h3 className="text-2xl font-bold text-white">{t('skills')}</h3>
               
@@ -103,7 +103,7 @@ export default function About() {
                     whileInView={{ opacity: 1, y: 0 }}
                     viewport={{ once: true }}
                     transition={{ duration: 0.3, delay: index * 0.1 }}
-                    className="bg-gray-800/30 rounded-xl p-6 border border-gray-700 hover:border-blue-500/50 transition-colors group"
+                    className="group rounded-xl border border-gray-700/80 bg-gray-800/30 p-6 transition-all hover:-translate-y-0.5 hover:border-blue-500/50 hover:shadow-lg hover:shadow-blue-900/10"
                   >
                     <div className="flex items-start space-x-4">
                       <div className="p-3 rounded-lg bg-gradient-to-br from-blue-500/20 to-purple-500/20 group-hover:from-blue-500/30 group-hover:to-purple-500/30 transition-colors">
@@ -119,7 +119,7 @@ export default function About() {
               </div>
 
               {/* Philosophy */}
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
+              <div className="rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6">
                 <h4 className="text-lg font-semibold text-white mb-3">{t('philosophy')}</h4>
                 <p className="text-gray-300">
                   {t('philosophyText')}
