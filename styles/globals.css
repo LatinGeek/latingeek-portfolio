@@ -1,3 +1,5 @@
+@import './theme.css';
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
@@ -9,13 +11,14 @@
 
 @layer base {
   * {
-    @apply border-gray-800;
+    @apply border-border;
   }
   html {
     @apply scroll-smooth;
   }
   body {
-    @apply bg-gray-950 text-gray-50 selection:bg-blue-500/30 selection:text-white;
+    @apply bg-background text-foreground selection:bg-primary-500/30 selection:text-white;
+    font-feature-settings: "rlig" 1, "calt" 1;
   }
 }
 
@@ -27,6 +30,52 @@
   .section-anchor-offset {
     scroll-margin-top: 5rem;
   }
+
+  /* Glassmorphism utilities */
+  .glass {
+    @apply bg-white/10 backdrop-blur-md border-white/10;
+  }
+  
+  .dark .glass {
+    @apply bg-black/20 backdrop-blur-lg border-white/5;
+  }
+
+  /* Gradient text utilities */
+  .gradient-text-primary {
+    @apply bg-gradient-to-r from-primary-500 to-primary-300 bg-clip-text text-transparent;
+  }
+
+  .gradient-text-secondary {
+    @apply bg-gradient-to-r from-secondary-500 to-secondary-300 bg-clip-text text-transparent;
+  }
+
+  /* Animation utilities */
+  .animate-in {
+    animation: animate-in 0.5s ease-out;
+  }
+
+  .animate-in-delay-1 {
+    animation: animate-in 0.5s ease-out 0.1s both;
+  }
+
+  .animate-in-delay-2 {
+    animation: animate-in 0.5s ease-out 0.2s both;
+  }
+
+  .animate-in-delay-3 {
+    animation: animate-in 0.5s ease-out 0.3s both;
+  }
+}
+
+@keyframes animate-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
 /* Custom scrollbar */
@@ -35,13 +84,24 @@
 }
 
 ::-webkit-scrollbar-track {
-  @apply bg-gray-900;
+  @apply bg-neutral-900;
 }
 
 ::-webkit-scrollbar-thumb {
-  @apply bg-gray-700 rounded-full;
+  @apply bg-neutral-700 rounded-full;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  @apply bg-gray-600;
+  @apply bg-neutral-600;
+}
+
+/* Reduced motion preferences */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
 }

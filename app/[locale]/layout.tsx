@@ -5,6 +5,7 @@ import { getMessages } from 'next-intl/server';
 import { setRequestLocale } from 'next-intl/server';
 import { notFound } from 'next/navigation';
 import { locales } from '@/lib/constants';
+import { ThemeProvider } from '@/components/providers/ThemeProvider';
 import Header from '@/components/layout/Header';
 import Footer from '@/components/layout/Footer';
 import '@/styles/globals.css';
@@ -54,15 +55,17 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className="scroll-smooth" data-scroll-behavior="smooth">
-      <body className={`${inter.className} bg-gray-950 text-gray-50 antialiased`}>
+      <body className={`${inter.className} bg-background text-foreground antialiased`} suppressHydrationWarning>
         <NextIntlClientProvider messages={messages}>
-          <div className="min-h-screen flex flex-col">
-            <Header />
-            <main className="flex-1">
-              {children}
-            </main>
-            <Footer />
-          </div>
+          <ThemeProvider>
+            <div className="min-h-screen flex flex-col">
+              <Header />
+              <main className="flex-1">
+                {children}
+              </main>
+              <Footer />
+            </div>
+          </ThemeProvider>
         </NextIntlClientProvider>
       </body>
     </html>
