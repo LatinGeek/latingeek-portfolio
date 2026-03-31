@@ -116,6 +116,14 @@ module.exports = {
         'slide-in-right': 'slideInRight 0.5s ease-out',
         'scale-in': 'scaleIn 0.5s ease-out',
         'blur-in': 'blurIn 0.5s ease-out',
+        'float': 'float 3s ease-in-out infinite',
+        'float-slow': 'float 5s ease-in-out infinite',
+        'float-fast': 'float 2s ease-in-out infinite',
+        'spin-slow': 'spin-slow 3s linear infinite',
+        'bounce-subtle': 'bounce-subtle 2s infinite',
+        'shake': 'shake 0.5s ease-in-out',
+        'gradient-shift': 'gradient-shift 3s ease infinite',
+        'ripple': 'ripple-animation 0.6s linear',
       },
       keyframes: {
         'pulse-glow': {
