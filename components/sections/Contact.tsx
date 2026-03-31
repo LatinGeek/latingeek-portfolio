@@ -38,7 +38,7 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-20 bg-gray-900/50">
+    <section id="contact" className="section-anchor-offset bg-gray-900/40 py-24 sm:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -59,21 +59,21 @@ export default function Contact() {
             </p>
           </motion.div>
 
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-14">
             {/* Contact Form */}
             <motion.div
               initial={{ opacity: 0, x: -20 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5 }}
-              className="bg-gray-900/30 rounded-2xl p-8 border border-gray-800"
+              className="rounded-2xl border border-gray-800/80 bg-gray-900/30 p-8 shadow-xl shadow-black/20"
             >
-              <h3 className="text-2xl font-bold text-white mb-6">Send me a message</h3>
+              <h3 className="mb-6 text-2xl font-bold text-white">{t('sendMessage')}</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-300 mb-2">
-                    Your Name
+                  <label htmlFor="name" className="mb-2 block text-sm font-medium text-gray-300">
+                    {t('name')}
                   </label>
                   <input
                     type="text"
@@ -82,14 +82,14 @@ export default function Contact() {
                     value={formData.name}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                    className="w-full rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     placeholder="John Doe"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-300 mb-2">
-                    Email Address
+                  <label htmlFor="email" className="mb-2 block text-sm font-medium text-gray-300">
+                    {t('email')}
                   </label>
                   <input
                     type="email"
@@ -98,14 +98,14 @@ export default function Contact() {
                     value={formData.email}
                     onChange={handleChange}
                     required
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors"
+                    className="w-full rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     placeholder="john@example.com"
                   />
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-300 mb-2">
-                    Your Message
+                  <label htmlFor="message" className="mb-2 block text-sm font-medium text-gray-300">
+                    {t('message')}
                   </label>
                   <textarea
                     id="message"
@@ -114,7 +114,7 @@ export default function Contact() {
                     onChange={handleChange}
                     required
                     rows={5}
-                    className="w-full px-4 py-3 bg-gray-800 border border-gray-700 rounded-xl text-white placeholder-gray-500 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 transition-colors resize-none"
+                    className="w-full resize-none rounded-xl border border-gray-700 bg-gray-800 px-4 py-3 text-white placeholder-gray-500 transition-colors focus:border-blue-500 focus:outline-none focus:ring-1 focus:ring-blue-500"
                     placeholder="Tell me about your project..."
                   />
                 </div>
@@ -122,16 +122,16 @@ export default function Contact() {
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className="w-full inline-flex items-center justify-center px-6 py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold hover:shadow-2xl hover:shadow-blue-500/30 transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                  className="inline-flex w-full items-center justify-center rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 px-6 py-4 font-semibold text-white shadow-lg shadow-blue-900/20 transition-all duration-300 hover:shadow-2xl hover:shadow-blue-500/30 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/70 disabled:cursor-not-allowed disabled:opacity-50"
                 >
                   {isSubmitting ? (
                     <>
                       <div className="w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin mr-2" />
-                      Sending...
+                      {t('sending')}
                     </>
                   ) : (
                     <>
-                      Send Message
+                      {t('send')}
                       <Send className="ml-2 w-5 h-5" />
                     </>
                   )}
@@ -141,9 +141,9 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 rounded-xl bg-green-500/10 border border-green-500/20 text-green-400 text-center"
+                    className="rounded-xl border border-green-500/20 bg-green-500/10 p-4 text-center text-green-400"
                   >
-                    Message sent successfully! I'll get back to you soon.
+                    {t('success')}
                   </motion.div>
                 )}
 
@@ -151,9 +151,9 @@ export default function Contact() {
                   <motion.div
                     initial={{ opacity: 0, y: 10 }}
                     animate={{ opacity: 1, y: 0 }}
-                    className="p-4 rounded-xl bg-red-500/10 border border-red-500/20 text-red-400 text-center"
+                    className="rounded-xl border border-red-500/20 bg-red-500/10 p-4 text-center text-red-400"
                   >
-                    Something went wrong. Please try again or email me directly.
+                    {t('error')}
                   </motion.div>
                 )}
               </form>
@@ -165,14 +165,12 @@ export default function Contact() {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: 0.1 }}
-              className="space-y-8"
+              className="space-y-8 rounded-2xl border border-gray-800/80 bg-gray-900/30 p-8 shadow-xl shadow-black/20"
             >
               <div>
-                <h3 className="text-2xl font-bold text-white mb-6">Let's work together</h3>
-                <p className="text-gray-400 mb-8 leading-relaxed">
-                  I'm currently available for freelance projects and full-time opportunities. 
-                  Whether you need a complete web application, a redesign, or technical consultation, 
-                  I'm here to help bring your ideas to life.
+                <h3 className="mb-6 text-2xl font-bold text-white">{t('workTogether')}</h3>
+                <p className="mb-8 leading-relaxed text-gray-400">
+                  {t('workText')}
                 </p>
               </div>
 
@@ -183,10 +181,10 @@ export default function Contact() {
                     <Mail className="w-6 h-6 text-blue-400" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Email</h4>
+                    <h4 className="mb-1 text-lg font-semibold text-white">{t('emailLabel')}</h4>
                     <a 
                       href="mailto:germanlamela@example.com" 
-                      className="text-gray-400 hover:text-blue-400 transition-colors"
+                      className="text-gray-400 transition-colors hover:text-blue-400"
                     >
                       germanlamela@example.com
                     </a>
@@ -198,9 +196,9 @@ export default function Contact() {
                     <MapPin className="w-6 h-6 text-purple-400" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Location</h4>
+                    <h4 className="mb-1 text-lg font-semibold text-white">{t('location')}</h4>
                     <p className="text-gray-400">Montevideo, Uruguay</p>
-                    <p className="text-sm text-gray-500 mt-1">Available for remote work worldwide</p>
+                    <p className="mt-1 text-sm text-gray-500">{t('remote')}</p>
                   </div>
                 </div>
 
@@ -209,22 +207,21 @@ export default function Contact() {
                     <Phone className="w-6 h-6 text-green-400" />
                   </div>
                   <div>
-                    <h4 className="text-lg font-semibold text-white mb-1">Response Time</h4>
+                    <h4 className="mb-1 text-lg font-semibold text-white">{t('responseTime')}</h4>
                     <p className="text-gray-400">Typically within 24 hours</p>
                   </div>
                 </div>
               </div>
 
               {/* Availability */}
-              <div className="bg-gradient-to-br from-blue-500/10 to-purple-500/10 rounded-xl p-6 border border-blue-500/20">
-                <h4 className="text-lg font-semibold text-white mb-3">Current Availability</h4>
-                <div className="flex items-center space-x-2 mb-3">
+              <div className="rounded-xl border border-blue-500/20 bg-gradient-to-br from-blue-500/10 to-purple-500/10 p-6">
+                <h4 className="mb-3 text-lg font-semibold text-white">{t('availability')}</h4>
+                <div className="mb-3 flex items-center space-x-2">
                   <div className="w-2 h-2 rounded-full bg-green-400 animate-pulse" />
-                  <span className="text-green-400 font-medium">Available for new projects</span>
+                  <span className="font-medium text-green-400">{t('available')}</span>
                 </div>
-                <p className="text-gray-400 text-sm">
-                  I'm currently taking on new clients and opportunities. Let's schedule a call 
-                  to discuss how I can help with your project.
+                <p className="text-sm text-gray-400">
+                  {t('availabilityText')}
                 </p>
               </div>
             </motion.div>

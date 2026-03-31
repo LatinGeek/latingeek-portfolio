@@ -23,7 +23,7 @@ export default function Projects() {
   const featuredProjects = projects.filter(project => project.importance === 'primary');
 
   return (
-    <section id="projects" className="py-20">
+    <section id="projects" className="section-anchor-offset py-24 sm:py-28">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="max-w-6xl mx-auto">
           {/* Section Header */}
@@ -45,7 +45,7 @@ export default function Projects() {
           </motion.div>
 
           {/* Projects Grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+          <div className="grid grid-cols-1 gap-8 lg:grid-cols-2">
             {featuredProjects.map((project, index) => (
               <motion.div
                 key={project.id}
@@ -55,9 +55,9 @@ export default function Projects() {
                 transition={{ duration: 0.5, delay: index * 0.1 }}
                 className="group relative"
               >
-                <div className="bg-gray-900/50 rounded-2xl overflow-hidden border border-gray-800 hover:border-blue-500/50 transition-all duration-300 h-full flex flex-col">
+                <div className="flex h-full flex-col overflow-hidden rounded-2xl border border-gray-800/80 bg-gray-900/40 transition-all duration-300 hover:-translate-y-1 hover:border-blue-500/50 hover:shadow-2xl hover:shadow-blue-900/15">
                   {/* Project Image */}
-                  <div className="relative h-48 overflow-hidden">
+                  <div className="relative h-52 overflow-hidden">
                     <div className="absolute inset-0 bg-gradient-to-br from-blue-500/30 via-purple-500/30 to-cyan-500/30" />
                     <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-transparent via-transparent to-black/50" />
                     <div className="relative w-full h-full">
@@ -66,7 +66,7 @@ export default function Projects() {
                           src={project.image}
                           alt={project.title}
                           fill
-                          className="object-cover opacity-80 hover:opacity-100 transition-opacity"
+                          className="object-cover opacity-80 transition-all duration-500 group-hover:scale-105 group-hover:opacity-100"
                           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         />
                       ) : (
@@ -84,17 +84,17 @@ export default function Projects() {
                   </div>
 
                   {/* Project Content */}
-                  <div className="p-6 flex-1 flex flex-col">
+                  <div className="flex flex-1 flex-col p-6">
                     <div className="flex-1">
                       <div className="flex items-start justify-between mb-3">
-                        <h3 className="text-xl font-bold text-white">{project.title}</h3>
+                        <h3 className="text-xl font-bold leading-tight text-white">{project.title}</h3>
                         <div className="flex items-center space-x-2">
                           {project.githubUrl && (
                             <a
                               href={project.githubUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                              className="rounded-lg bg-gray-800 p-2 text-gray-400 transition-colors hover:bg-gray-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
                               aria-label="GitHub repository"
                             >
                               <Github className="w-4 h-4" />
@@ -105,7 +105,7 @@ export default function Projects() {
                               href={project.liveUrl}
                               target="_blank"
                               rel="noopener noreferrer"
-                              className="p-2 rounded-lg bg-gray-800 text-gray-400 hover:text-white hover:bg-gray-700 transition-colors"
+                              className="rounded-lg bg-gray-800 p-2 text-gray-400 transition-colors hover:bg-gray-700 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
                               aria-label="Live demo"
                             >
                               <ExternalLink className="w-4 h-4" />
@@ -114,14 +114,14 @@ export default function Projects() {
                         </div>
                       </div>
                       
-                      <p className="text-gray-400 mb-4">{project.description}</p>
+                      <p className="mb-4 text-gray-400">{project.description}</p>
                       
                       {/* Tech Stack */}
-                      <div className="flex flex-wrap gap-2 mb-4">
+                      <div className="mb-4 flex flex-wrap gap-2">
                         {project.technologies.map((tech) => (
                           <span
                             key={tech}
-                            className="px-3 py-1 text-xs rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20"
+                            className="rounded-full border border-blue-500/20 bg-blue-500/10 px-3 py-1 text-xs text-blue-300"
                           >
                             {tech}
                           </span>
@@ -131,11 +131,11 @@ export default function Projects() {
 
                     {/* Project Highlights */}
                     {project.features && project.features.length > 0 && (
-                      <div className="pt-4 border-t border-gray-800">
+                      <div className="border-t border-gray-800 pt-4">
                         <h4 className="text-sm font-semibold text-gray-300 mb-2">{t('highlights')}</h4>
                         <ul className="space-y-1">
                           {project.features.slice(0, 2).map((feature, i) => (
-                            <li key={i} className="text-sm text-gray-400 flex items-start">
+                            <li key={i} className="flex items-start text-sm text-gray-400">
                               <span className="text-blue-400 mr-2">•</span>
                               {feature}
                             </li>
@@ -157,17 +157,17 @@ export default function Projects() {
             transition={{ duration: 0.5, delay: 0.4 }}
             className="text-center mt-12"
           >
-            <p className="text-gray-400 mb-6">
-              Want to see more? Check out my GitHub for additional projects and contributions.
+            <p className="mb-6 text-gray-400">
+              {t('viewMore')}
             </p>
             <a
               href="https://github.com/LatinGeek"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center px-6 py-3 rounded-xl border-2 border-gray-700 text-gray-300 font-semibold hover:border-blue-500 hover:text-white hover:bg-blue-500/10 transition-all duration-300"
+              className="inline-flex items-center rounded-xl border border-gray-700 bg-gray-900/70 px-6 py-3 font-semibold text-gray-200 transition-all duration-300 hover:border-blue-500 hover:bg-blue-500/10 hover:text-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-blue-500/60"
             >
               <Github className="w-5 h-5 mr-2" />
-              View All Projects on GitHub
+              {t('viewAll')}
             </a>
           </motion.div>
         </div>
