@@ -1,6 +1,6 @@
 import PremiumHero from '@/components/sections/PremiumHero';
 import About from '@/components/sections/About';
-import Projects from '@/components/sections/Projects';
+import AnimatedProjects from '@/components/sections/AnimatedProjects';
 import Contact from '@/components/sections/Contact';
 import { getBio, getProjects } from '@/lib/content-loader';
 
@@ -19,7 +19,7 @@ export default async function HomePage({ params }: HomePageProps) {
     <>
       <PremiumHero />
       <About bio={bio} />
-      <Projects projects={projects} />
+      <AnimatedProjects projects={projects} />
       <Contact />
     </>
   );
