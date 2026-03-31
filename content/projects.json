@@ -94,14 +94,14 @@
   {
     "id": "jl-consultorias",
     "title": "JL Consultorias Website",
-    "description": "Corporate website for JL Consultorias, a business consulting firm, featuring service展示, client testimonials, and contact management.",
+    "description": "Corporate website for JL Consultorias, a business consulting firm, featuring service showcase, client testimonials, and contact management.",
     "longDescription": "Designed and developed a professional corporate website for JL Consultorias, showcasing their services, team, case studies, and client testimonials. Implemented a custom CMS for content management, contact form with CRM integration, and multilingual support.",
     "technologies": ["Next.js", "Tailwind CSS", "Strapi CMS", "PostgreSQL", "Nodemailer", "Framer Motion"],
     "features": [
       "Custom CMS for content management",
       "Multilingual support (ES/EN)",
       "Contact form with CRM integration",
-      "Service展示 with interactive elements",
+      "Service showcase with interactive elements",
       "Team management dashboard",
       "Performance optimized (95+ Lighthouse)"
     ],
@@ -116,7 +116,7 @@
   {
     "id": "residencial-palermo",
     "title": "Residencial Palermo",
-    "description": "Modern responsive website for a senior care facility in Montevideo, featuring service展示, photo gallery, and contact management.",
+    "description": "Modern responsive website for a senior care facility in Montevideo, featuring service showcase, photo gallery, and contact management.",
     "longDescription": "Developed a comprehensive website for Residencial Palermo, a senior care facility, featuring modern glassmorphism design, interactive photo gallery with modal viewer, contact form with validation, and responsive layout optimized for all devices. The website improved online inquiries by 60% and provided families with easy access to facility information.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "EmailJS", "Figma", "Git"],
     "features": [
@@ -139,7 +139,7 @@
     "id": "residencial-blanes",
     "title": "Residencial Blanes",
     "description": "Professional website for a family-owned senior care facility with over 10 years of experience in elderly care services.",
-    "longDescription": "Created a professional website for Residencial Blanes showcasing their 10+ years of experience in senior care. Features include detailed service展示, facility photo gallery, client testimonials, FAQ section, and integrated contact form. The website established a strong digital presence and improved client acquisition.",
+    "longDescription": "Created a professional website for Residencial Blanes showcasing their 10+ years of experience in senior care. Features include detailed service showcase, facility photo gallery, client testimonials, FAQ section, and integrated contact form. The website established a strong digital presence and improved client acquisition.",
     "technologies": ["HTML5", "CSS3", "JavaScript", "Bootstrap", "EmailJS", "GitHub Pages", "Figma"],
     "features": [
       "Professional healthcare website design",
@@ -160,11 +160,11 @@
   {
     "id": "bel-mangiare-pastas",
     "title": "Bel Mangiare Pastas",
-    "description": "E-commerce website for an artisanal pasta company featuring product展示, online ordering, and recipe blog.",
-    "longDescription": "Developed an e-commerce platform for Bel Mangiare Pastas, an artisanal pasta company. The website features product展示 with high-quality images, online ordering system, recipe blog with cooking tips, and integration with payment gateways. Increased online sales by 45% in the first quarter.",
+    "description": "E-commerce website for an artisanal pasta company featuring product showcase, online ordering, and recipe blog.",
+    "longDescription": "Developed an e-commerce platform for Bel Mangiare Pastas, an artisanal pasta company. The website features product showcase with high-quality images, online ordering system, recipe blog with cooking tips, and integration with payment gateways. Increased online sales by 45% in the first quarter.",
     "technologies": ["Shopify", "Liquid", "JavaScript", "CSS3", "Google Analytics", "Mailchimp", "Stripe"],
     "features": [
-      "E-commerce product展示 with filtering",
+      "E-commerce product showcase with filtering",
       "Online ordering and checkout system",
       "Recipe blog with cooking tutorials",
       "Newsletter subscription integration",
