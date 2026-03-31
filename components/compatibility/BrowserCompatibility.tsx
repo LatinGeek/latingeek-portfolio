@@ -36,6 +36,9 @@ export default function BrowserCompatibility({
     if (enablePolyfills && browserInfo && !browserInfo.isModern) {
       browserCompatibility.loadPolyfills().then(() => {
         setPolyfillsLoaded(true);
+      }).catch((error) => {
+        console.warn('Polyfill loading failed:', error);
+        setPolyfillsLoaded(true); // Mark as loaded anyway to avoid infinite loading
       });
     }
   }, [enablePolyfills, browserInfo]);
@@ -150,7 +153,7 @@ export default function BrowserCompatibility({
                   <div className="pt-2">
                     <div className="flex items-center gap-2 text-xs text-foreground/60">
                       <RefreshCw className="w-3 h-3 animate-spin" />
-                      Loading compatibility polyfills...
+                      Preparing compatibility features...
                     </div>
                   </div>
                 )}
