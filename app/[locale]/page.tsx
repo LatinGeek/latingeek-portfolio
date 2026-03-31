@@ -1,7 +1,7 @@
 import PremiumHero from '@/components/sections/PremiumHero';
 import About from '@/components/sections/About';
 import AnimatedProjects from '@/components/sections/AnimatedProjects';
-import Contact from '@/components/sections/Contact';
+import InteractiveContact from '@/components/sections/InteractiveContact';
 import { getBio, getProjects } from '@/lib/content-loader';
 
 interface HomePageProps {
@@ -20,7 +20,7 @@ export default async function HomePage({ params }: HomePageProps) {
       <PremiumHero />
       <About bio={bio} />
       <AnimatedProjects projects={projects} />
-      <Contact />
+      <InteractiveContact />
     </>
   );
 }
