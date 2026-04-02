@@ -385,7 +385,7 @@ export default function PremiumHeroEnhanced() {
           >
             <Button
               size="lg"
-              variant="premium"
+              variant="gradient"
               className="group relative overflow-hidden"
             >
               <span className="relative z-10 flex items-center gap-2">

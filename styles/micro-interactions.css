@@ -15,8 +15,7 @@
 }
 
 .btn-hover-glow {
-  @apply transition-all duration-300 hover:shadow-lg;
-  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -4px rgba(59, 130, 246, 0.3);
+  @apply transition-all duration-300 hover:shadow-lg hover:shadow-blue-500/30;
 }
 
 .btn-hover-gradient {
@@ -37,7 +36,7 @@
 
 .link-hover-underline::after {
   content: '';
-  @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300;
+  @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300;
 }
 
 .link-hover-underline:hover::after {
@@ -45,7 +44,7 @@
 }
 
 .link-hover-gradient {
-  @apply bg-gradient-to-r from-primary-400 to-secondary-400 bg-clip-text text-transparent bg-[length:200%_100%] bg-[position:0%_50%] transition-all duration-500;
+  @apply bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text text-transparent bg-[length:200%_100%] bg-[position:0%_50%] transition-all duration-500;
 }
 
 .link-hover-gradient:hover {
@@ -58,7 +57,7 @@
 }
 
 .card-hover-glow {
-  @apply transition-all duration-500 hover:shadow-xl hover:shadow-primary-500/20;
+  @apply transition-all duration-500 hover:shadow-xl hover:shadow-blue-500/20;
 }
 
 .card-hover-scale {
@@ -284,11 +283,11 @@
 
 /* Focus states */
 .focus-ring {
-  @apply focus:outline-none focus:ring-2 focus:ring-primary-500/50 focus:ring-offset-2 focus:ring-offset-background;
+  @apply focus:outline-none focus:ring-2 focus:ring-blue-500/50 focus:ring-offset-2 focus:ring-offset-background;
 }
 
 .focus-ring-inset {
-  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-primary-500/50;
+  @apply focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500/50;
 }
 
 /* Active states */
@@ -322,7 +321,7 @@
 
 .nav-link::after {
   content: '';
-  @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-primary-500 to-secondary-500 transition-all duration-300;
+  @apply absolute left-0 -bottom-1 w-0 h-0.5 bg-gradient-to-r from-blue-500 to-purple-500 transition-all duration-300;
 }
 
 .nav-link:hover::after {
@@ -353,7 +352,7 @@
 
 /* Form input focus */
 .form-input {
-  @apply transition-all duration-200 focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500;
+  @apply transition-all duration-200 focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500;
 }
 
 /* Loading spinner */

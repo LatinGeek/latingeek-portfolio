@@ -26,15 +26,15 @@ export async function loadContent<T>(locale: string, contentType: 'bio' | 'proje
 /**
  * Get bio content for a specific locale
  */
-export async function getBio(locale: string) {
-  return loadContent(locale, 'bio');
+export async function getBio(locale: string): Promise<BioContent> {
+  return loadContent<BioContent>(locale, 'bio');
 }
 
 /**
  * Get projects content for a specific locale
  */
-export async function getProjects(locale: string) {
-  return loadContent(locale, 'projects');
+export async function getProjects(locale: string): Promise<ProjectContent[]> {
+  return loadContent<ProjectContent[]>(locale, 'projects');
 }
 
 /**

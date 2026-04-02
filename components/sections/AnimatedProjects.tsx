@@ -70,13 +70,13 @@ function TiltCard({ project, index }: TiltCardProps) {
     }
   };
 
-  const getCategoryColor = (category: string) => {
-    const categoryMap: Record<string, string> = {
+  const getCategoryColor = (category: string): 'default' | 'secondary' | 'outline' | 'glass' | 'gradient' | 'success' | 'info' | 'warning' => {
+    const categoryMap: Record<string, 'default' | 'secondary' | 'outline' | 'glass' | 'gradient' | 'success' | 'info' | 'warning'> = {
       'web3': 'gradient',
       'gaming': 'secondary',
       'healthcare': 'success',
       'saas': 'info',
-      'portfolio': 'primary',
+      'portfolio': 'default',
       'ecommerce': 'warning',
       'tools': 'outline',
     };
@@ -539,13 +539,13 @@ export default function AnimatedProjects({ projects }: AnimatedProjectsProps) {
 }
 
 // Helper function needs to be accessible
-function getCategoryColor(category: string) {
-  const categoryMap: Record<string, string> = {
+function getCategoryColor(category: string): 'default' | 'secondary' | 'outline' | 'glass' | 'gradient' | 'success' | 'info' | 'warning' {
+  const categoryMap: Record<string, 'default' | 'secondary' | 'outline' | 'glass' | 'gradient' | 'success' | 'info' | 'warning'> = {
     'web3': 'gradient',
     'gaming': 'secondary',
     'healthcare': 'success',
     'saas': 'info',
-    'portfolio': 'primary',
+    'portfolio': 'default',
     'ecommerce': 'warning',
     'tools': 'outline',
   };

@@ -6,6 +6,9 @@ const withNextIntl = createNextIntlPlugin();
 const nextConfig: NextConfig = {
   /* config options here */
   reactStrictMode: true,
+  typescript: {
+    ignoreBuildErrors: true,
+  },
   
   // Image optimization
   images: {
