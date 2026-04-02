@@ -1,5 +1,8 @@
 @import './theme.css';
 
+/* Sector32-inspired geometric typography */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;

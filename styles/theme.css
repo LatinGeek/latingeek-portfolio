@@ -123,6 +123,34 @@
   --ease-out: cubic-bezier(0, 0, 0.2, 1);
   --ease-in: cubic-bezier(0.4, 0, 1, 1);
   --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+  /* Geometric particle foundations (sector32 inspired) */
+  --geometric-bg: #0c0c0c; /* Sector32 black for deep background */
+  --geometric-surface: #111111;
+  --geometric-border: #222222;
+  
+  /* Particle-geometric hybrid shapes */
+  --particle-triangle: polygon(50% 0%, 0% 100%, 100% 100%);
+  --particle-hexagon: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  --particle-diamond: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  
+  /* Geometric particle colors (aligned with existing palette) */
+  --geometric-blue: var(--color-primary-500);    /* #3b82f6 */
+  --geometric-purple: var(--color-secondary-500); /* #a855f7 */
+  --geometric-cyan: var(--color-accent-500);     /* #06b6d4 */
+  --geometric-green: var(--color-success-500);   /* #22c55e */
+  
+  /* Geometric particle opacity */
+  --particle-opacity-low: 0.15;
+  --particle-opacity-medium: 0.3;
+  --particle-opacity-high: 0.45;
+  
+  /* Geometric animation */
+  --geometric-rotation-speed: 60s; /* Slow rotation for subtle motion */
+  --geometric-pulse-speed: 3s;
+  
+  /* Technical typography (sector32 inspired) */
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
 }
 
 [data-theme="dark"] {
@@ -239,6 +267,34 @@
   --backdrop-blur: 12px;
   --backdrop-brightness: 0.8;
   --backdrop-saturate: 1.1;
+
+  /* Geometric particle foundations for dark mode */
+  --geometric-bg: #000000; /* Even deeper black for dark mode */
+  --geometric-surface: #0a0a0a;
+  --geometric-border: #1a1a1a;
+  
+  /* Particle-geometric hybrid shapes (inherited from root) */
+  --particle-triangle: polygon(50% 0%, 0% 100%, 100% 100%);
+  --particle-hexagon: polygon(25% 0%, 75% 0%, 100% 50%, 75% 100%, 25% 100%, 0% 50%);
+  --particle-diamond: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+  
+  /* Geometric particle colors for dark mode */
+  --geometric-blue: var(--color-primary-600);    /* #60a5fa - brighter for dark mode */
+  --geometric-purple: var(--color-secondary-600); /* #c084fc - brighter for dark mode */
+  --geometric-cyan: var(--color-accent-600);     /* #22d3ee - brighter for dark mode */
+  --geometric-green: var(--color-success-600);   /* #4ade80 - brighter for dark mode */
+  
+  /* Geometric particle opacity for dark mode */
+  --particle-opacity-low: 0.2;
+  --particle-opacity-medium: 0.35;
+  --particle-opacity-high: 0.5;
+  
+  /* Geometric animation */
+  --geometric-rotation-speed: 90s; /* Slower rotation for dark mode */
+  --geometric-pulse-speed: 4s;
+  
+  /* Technical typography for dark mode */
+  --font-mono: 'IBM Plex Mono', 'SF Mono', Monaco, 'Cascadia Code', monospace;
 }
 
 /* Utility classes for theme-aware components */
