@@ -58,94 +58,6 @@ export const floatingAnimation = (delay: number = 0) => ({
   }
 });
 
-// Text gradient on hover
-export const textGradientHover = {
-  initial: { backgroundPosition: "0% 50%" },
-  whileHover: { backgroundPosition: "100% 50%" },
-  transition: { duration: 0.5, ease: "easeInOut" }
-};
-
-// Border glow effect
-export const borderGlow = {
-  initial: { borderColor: "rgba(255, 255, 255, 0.1)" },
-  whileHover: { borderColor: "rgba(59, 130, 246, 0.5)" },
-  transition: { duration: 0.3 }
-};
-
-// Ripple effect for buttons
-export const createRipple = (event: React.MouseEvent<HTMLButtonElement>) => {
-  const button = event.currentTarget;
-  const circle = document.createElement("span");
-  const diameter = Math.max(button.clientWidth, button.clientHeight);
-  const radius = diameter / 2;
-
-  circle.style.width = circle.style.height = `${diameter}px`;
-  circle.style.left = `${event.clientX - button.getBoundingClientRect().left - radius}px`;
-  circle.style.top = `${event.clientY - button.getBoundingClientRect().top - radius}px`;
-  circle.classList.add("ripple");
-
-  const ripple = button.getElementsByClassName("ripple")[0];
-  if (ripple) {
-    ripple.remove();
-  }
-
-  button.appendChild(circle);
-};
-
-// Stagger children animation
-export const staggerContainer = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.1,
-      delayChildren: 0.2,
-    }
-  }
-};
-
-// Fade in up animation
-export const fadeInUp = {
-  hidden: { opacity: 0, y: 20 },
-  show: { opacity: 1, y: 0 },
-  transition: { duration: 0.5 }
-};
-
-// Typewriter effect
-export const typewriter = (text: string, delay: number = 0) => ({
-  hidden: { width: 0 },
-  show: {
-    width: "100%",
-    transition: {
-      duration: text.length * 0.05,
-      delay,
-      ease: "linear"
-    }
-  }
-});
-
-// Parallax scroll effect
-export const parallaxScroll = (yOffset: number = 50) => ({
-  initial: { y: yOffset, opacity: 0 },
-  whileInView: { y: 0, opacity: 1 },
-  viewport: { once: true, margin: "-100px" },
-  transition: { duration: 0.8, ease: "easeOut" }
-});
-
-// Glass morphism hover
-export const glassHover = {
-  initial: { backdropFilter: "blur(8px)" },
-  whileHover: { backdropFilter: "blur(12px)" },
-  transition: { duration: 0.3 }
-};
-
-// Color shift on hover
-export const colorShift = (fromColor: string, toColor: string) => ({
-  initial: { color: fromColor },
-  whileHover: { color: toColor },
-  transition: { duration: 0.3 }
-});
-
 // Rotate on hover
 export const rotateHover = {
   whileHover: { rotate: 5 },
@@ -153,50 +65,26 @@ export const rotateHover = {
   transition: { type: "spring", stiffness: 300, damping: 20 }
 };
 
-// Bounce animation
-export const bounce = {
-  animate: {
-    y: [0, -10, 0],
+// Glass morphism hover effect
+export const glassHover = {
+  whileHover: {
+    backgroundColor: "rgba(255, 255, 255, 0.1)",
+    backdropFilter: "blur(10px)",
   },
-  transition: {
-    duration: 0.6,
-    repeat: Infinity,
-    repeatType: "reverse" as const,
-  }
+  transition: { duration: 0.3 }
 };
 
-// Gradient border animation
-export const gradientBorderAnimation = {
+// Staggered children animation
+export const staggerContainer = {
   animate: {
-    backgroundPosition: ["0% 50%", "100% 50%", "0% 50%"],
-  },
-  transition: {
-    duration: 3,
-    repeat: Infinity,
-    ease: "linear",
+    transition: {
+      staggerChildren: 0.1,
+    }
   }
 };
 
-// Tooltip reveal animation
-export const tooltipReveal = {
-  initial: { opacity: 0, scale: 0.9 },
-  animate: { opacity: 1, scale: 1 },
-  exit: { opacity: 0, scale: 0.9 },
-  transition: { duration: 0.2 }
-};
-
-// Loading spinner animation
-export const loadingSpinner = {
-  animate: { rotate: 360 },
-  transition: {
-    duration: 1,
-    repeat: Infinity,
-    ease: "linear",
-  }
-};
-
-// Page transition animations
-export const pageTransition = {
+// Fade in animation
+export const fadeIn = {
   initial: { opacity: 0, y: 20 },
   animate: { opacity: 1, y: 0 },
   exit: { opacity: 0, y: -20 },
@@ -221,42 +109,19 @@ export const magneticPull = {
   }
 };
 
-// Utility component for hover effects
-export const HoverEffect: React.FC<{
-  children: React.ReactNode;
-  effect?: keyof typeof effects;
-  className?: string;
-}> = ({ children, effect = 'lift', className = '' }) => {
-  const effects = {
-    lift: hoverLift,
-    scale: hoverScale,
-    rotate: rotateHover,
-    glass: glassHover,
-  };
-
-  return (
-    <motion.div
-      {...effects[effect]}
-      className={className}
-    >
-      {children}
-    </motion.div>
-  );
-};
-
 // CSS classes for micro-interactions
 export const microInteractionClasses = {
   // Button hover effects
-  buttonHover: "transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/20",
+  buttonHover: "transition-all duration-300 hover:shadow-lg",
   
   // Link hover effects
   linkHover: "transition-colors duration-200 hover:text-primary-400",
   
   // Card hover effects
-  cardHover: "transition-all duration-300 hover:border-primary-500/30 hover:shadow-xl",
+  cardHover: "transition-all duration-300 hover:border-blue-500/30 hover:shadow-xl",
   
   // Input focus effects
-  inputFocus: "focus:ring-2 focus:ring-primary-500/30 focus:border-primary-500",
+  inputFocus: "focus:ring-2 focus:ring-blue-500/30 focus:border-blue-500",
   
   // Image hover effects
   imageHover: "transition-transform duration-500 hover:scale-105",

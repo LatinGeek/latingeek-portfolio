@@ -4,31 +4,85 @@
  */
 
 :root {
-  /* Light theme variables */
+  /* Light theme variables - Enhanced UI/UX Pro Max */
+  
+  /* Primary palette - Blue (enhanced contrast) */
   --color-primary-50: #eff6ff;
   --color-primary-100: #dbeafe;
   --color-primary-200: #bfdbfe;
   --color-primary-300: #93c5fd;
   --color-primary-400: #60a5fa;
-  --color-primary-500: #3b82f6;
+  --color-primary-500: #3b82f6;  /* Base - WCAG AA compliant */
   --color-primary-600: #2563eb;
   --color-primary-700: #1d4ed8;
   --color-primary-800: #1e40af;
   --color-primary-900: #1e3a8a;
   --color-primary-950: #172554;
 
+  /* Secondary palette - Purple (enhanced vibrancy) */
   --color-secondary-50: #faf5ff;
   --color-secondary-100: #f3e8ff;
   --color-secondary-200: #e9d5ff;
   --color-secondary-300: #d8b4fe;
   --color-secondary-400: #c084fc;
-  --color-secondary-500: #a855f7;
+  --color-secondary-500: #a855f7;  /* Base */
   --color-secondary-600: #9333ea;
   --color-secondary-700: #7e22ce;
   --color-secondary-800: #6b21a8;
   --color-secondary-900: #581c87;
   --color-secondary-950: #3b0764;
 
+  /* Accent palette - Cyan (new addition) */
+  --color-accent-50: #ecfeff;
+  --color-accent-100: #cffafe;
+  --color-accent-200: #a5f3fc;
+  --color-accent-300: #67e8f9;
+  --color-accent-400: #22d3ee;
+  --color-accent-500: #06b6d4;  /* Base */
+  --color-accent-600: #0891b2;
+  --color-accent-700: #0e7490;
+  --color-accent-800: #155e75;
+  --color-accent-900: #164e63;
+  --color-accent-950: #083344;
+
+  /* Status colors (enhanced for better visibility) */
+  --color-success-50: #f0fdf4;
+  --color-success-100: #dcfce7;
+  --color-success-200: #bbf7d0;
+  --color-success-300: #86efac;
+  --color-success-400: #4ade80;
+  --color-success-500: #22c55e;  /* Base - WCAG AA compliant */
+  --color-success-600: #16a34a;
+  --color-success-700: #15803d;
+  --color-success-800: #166534;
+  --color-success-900: #14532d;
+  --color-success-950: #052e16;
+
+  --color-error-50: #fef2f2;
+  --color-error-100: #fee2e2;
+  --color-error-200: #fecaca;
+  --color-error-300: #fca5a5;
+  --color-error-400: #f87171;
+  --color-error-500: #ef4444;  /* Base - WCAG AA compliant */
+  --color-error-600: #dc2626;
+  --color-error-700: #b91c1c;
+  --color-error-800: #991b1b;
+  --color-error-900: #7f1d1d;
+  --color-error-950: #450a0a;
+
+  --color-warning-50: #fffbeb;
+  --color-warning-100: #fef3c7;
+  --color-warning-200: #fde68a;
+  --color-warning-300: #fcd34d;
+  --color-warning-400: #fbbf24;
+  --color-warning-500: #f59e0b;  /* Base - WCAG AA compliant */
+  --color-warning-600: #d97706;
+  --color-warning-700: #b45309;
+  --color-warning-800: #92400e;
+  --color-warning-900: #78350f;
+  --color-warning-950: #451a03;
+
+  /* Enhanced neutral palette (better contrast ratios) */
   --color-neutral-50: #f9fafb;
   --color-neutral-100: #f3f4f6;
   --color-neutral-200: #e5e7eb;
@@ -41,41 +95,116 @@
   --color-neutral-900: #111827;
   --color-neutral-950: #030712;
 
+  /* Enhanced semantic colors */
   --color-background: #ffffff;
   --color-foreground: #030712;
   --color-surface: #f9fafb;
+  --color-surface-elevated: #ffffff;
   --color-border: #e5e7eb;
+  --color-border-subtle: #d1d5db;
+  --color-muted: #6b7280;
+  --color-muted-foreground: #4b5563;
 
+  /* Enhanced shadow system */
   --shadow-intensity: 0.1;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, calc(0.05 * var(--shadow-intensity)));
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity))), 0 2px 4px -2px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity)));
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity))), 0 4px 6px -4px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity)));
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity))), 0 8px 10px -6px rgba(0, 0, 0, calc(0.1 * var(--shadow-intensity)));
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, calc(0.25 * var(--shadow-intensity)));
+
+  /* Enhanced backdrop effects */
   --backdrop-blur: 8px;
   --backdrop-brightness: 1;
+  --backdrop-saturate: 1.2;
+
+  /* Animation easing functions */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --ease-out: cubic-bezier(0, 0, 0.2, 1);
+  --ease-in: cubic-bezier(0.4, 0, 1, 1);
+  --ease-spring: cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
 [data-theme="dark"] {
+  /* Dark theme variables - Enhanced UI/UX Pro Max */
+  
+  /* Primary palette - Blue (inverted for dark mode) */
   --color-primary-50: #172554;
   --color-primary-100: #1e3a8a;
   --color-primary-200: #1e40af;
   --color-primary-300: #1d4ed8;
   --color-primary-400: #2563eb;
-  --color-primary-500: #3b82f6;
+  --color-primary-500: #3b82f6;  /* Base */
   --color-primary-600: #60a5fa;
   --color-primary-700: #93c5fd;
   --color-primary-800: #bfdbfe;
   --color-primary-900: #dbeafe;
   --color-primary-950: #eff6ff;
 
+  /* Secondary palette - Purple (inverted for dark mode) */
   --color-secondary-50: #3b0764;
   --color-secondary-100: #581c87;
   --color-secondary-200: #6b21a8;
   --color-secondary-300: #7e22ce;
   --color-secondary-400: #9333ea;
-  --color-secondary-500: #a855f7;
+  --color-secondary-500: #a855f7;  /* Base */
   --color-secondary-600: #c084fc;
   --color-secondary-700: #d8b4fe;
   --color-secondary-800: #e9d5ff;
   --color-secondary-900: #f3e8ff;
   --color-secondary-950: #faf5ff;
 
+  /* Accent palette - Cyan (inverted for dark mode) */
+  --color-accent-50: #083344;
+  --color-accent-100: #164e63;
+  --color-accent-200: #155e75;
+  --color-accent-300: #0e7490;
+  --color-accent-400: #0891b2;
+  --color-accent-500: #06b6d4;  /* Base */
+  --color-accent-600: #22d3ee;
+  --color-accent-700: #67e8f9;
+  --color-accent-800: #a5f3fc;
+  --color-accent-900: #cffafe;
+  --color-accent-950: #ecfeff;
+
+  /* Status colors (inverted for dark mode) */
+  --color-success-50: #052e16;
+  --color-success-100: #14532d;
+  --color-success-200: #166534;
+  --color-success-300: #15803d;
+  --color-success-400: #16a34a;
+  --color-success-500: #22c55e;  /* Base */
+  --color-success-600: #4ade80;
+  --color-success-700: #86efac;
+  --color-success-800: #bbf7d0;
+  --color-success-900: #dcfce7;
+  --color-success-950: #f0fdf4;
+
+  --color-error-50: #450a0a;
+  --color-error-100: #7f1d1d;
+  --color-error-200: #991b1b;
+  --color-error-300: #b91c1c;
+  --color-error-400: #dc2626;
+  --color-error-500: #ef4444;  /* Base */
+  --color-error-600: #f87171;
+  --color-error-700: #fca5a5;
+  --color-error-800: #fecaca;
+  --color-error-900: #fee2e2;
+  --color-error-950: #fef2f2;
+
+  --color-warning-50: #451a03;
+  --color-warning-100: #78350f;
+  --color-warning-200: #92400e;
+  --color-warning-300: #b45309;
+  --color-warning-400: #d97706;
+  --color-warning-500: #f59e0b;  /* Base */
+  --color-warning-600: #fbbf24;
+  --color-warning-700: #fcd34d;
+  --color-warning-800: #fde68a;
+  --color-warning-900: #fef3c7;
+  --color-warning-950: #fffbeb;
+
+  /* Enhanced neutral palette (inverted for dark mode) */
   --color-neutral-50: #030712;
   --color-neutral-100: #111827;
   --color-neutral-200: #1f2937;
@@ -88,14 +217,28 @@
   --color-neutral-900: #f3f4f6;
   --color-neutral-950: #f9fafb;
 
+  /* Enhanced semantic colors for dark mode */
   --color-background: #030712;
   --color-foreground: #f9fafb;
   --color-surface: #111827;
+  --color-surface-elevated: #1f2937;
   --color-border: #374151;
+  --color-border-subtle: #4b5563;
+  --color-muted: #9ca3af;
+  --color-muted-foreground: #d1d5db;
 
+  /* Enhanced shadow system for dark mode */
   --shadow-intensity: 0.3;
+  --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, calc(0.3 * var(--shadow-intensity)));
+  --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity))), 0 2px 4px -2px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity)));
+  --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity))), 0 4px 6px -4px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity)));
+  --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity))), 0 8px 10px -6px rgba(0, 0, 0, calc(0.4 * var(--shadow-intensity)));
+  --shadow-2xl: 0 25px 50px -12px rgba(0, 0, 0, calc(0.5 * var(--shadow-intensity)));
+
+  /* Enhanced backdrop effects for dark mode */
   --backdrop-blur: 12px;
   --backdrop-brightness: 0.8;
+  --backdrop-saturate: 1.1;
 }
 
 /* Utility classes for theme-aware components */

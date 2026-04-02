@@ -18,8 +18,18 @@
     @apply scroll-smooth;
   }
   body {
-    @apply bg-background text-foreground selection:bg-primary-500/30 selection:text-white;
+    @apply bg-background text-foreground;
     font-feature-settings: "rlig" 1, "calt" 1;
+  }
+  
+  /* Custom selection styles */
+  ::selection {
+    background-color: rgba(59, 130, 246, 0.3); /* primary-500 with 30% opacity */
+    color: white;
+  }
+  ::-moz-selection {
+    background-color: rgba(59, 130, 246, 0.3); /* primary-500 with 30% opacity */
+    color: white;
   }
 }
 

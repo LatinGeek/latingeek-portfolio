@@ -15,7 +15,8 @@
 }
 
 .btn-hover-glow {
-  @apply transition-all duration-300 hover:shadow-lg hover:shadow-primary-500/30;
+  @apply transition-all duration-300 hover:shadow-lg;
+  box-shadow: 0 10px 15px -3px rgba(59, 130, 246, 0.3), 0 4px 6px -4px rgba(59, 130, 246, 0.3);
 }
 
 .btn-hover-gradient {
