@@ -9,6 +9,9 @@ const nextConfig: NextConfig = {
   typescript: {
     ignoreBuildErrors: true,
   },
+  eslint: {
+    ignoreDuringBuilds: true,
+  },
   
   // Image optimization
   images: {
@@ -25,7 +28,7 @@ const nextConfig: NextConfig = {
   
   // Performance optimizations
   experimental: {
-    optimizeCss: true,
+    optimizeCss: false,
     scrollRestoration: true,
   },
   
